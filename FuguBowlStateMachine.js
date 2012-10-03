@@ -259,6 +259,8 @@ private var state:String;
 function Start() {
 	InitPlayers();
 	CreatePins();
+	yield WaitForSeconds(waitBeforeRoll);
+	ball.GetComponent(FuguForce).enabled = true;
 	state="StateNewGame";
 	while (true) {
 		Debug.Log("State "+state);
@@ -272,8 +274,6 @@ function StateNewGame() {
 	}
 	frame = 0;
 	currentplayer=0;
-	yield WaitForSeconds(waitBeforeRoll);
-	ball.GetComponent(FuguForce).enabled = true;
 	state="StateBall1";
 }
 
