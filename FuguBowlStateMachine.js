@@ -31,10 +31,16 @@ function CreatePins() {
 	}
 }
 
-private var roll;
-
 // current frame, ranges for 0-9 (representing 1-10)
 private var frame:int;
+
+enum Roll {
+	Ball1,
+	Ball2,
+	Ball3
+}
+
+private var roll:Roll; // the current roll in the current frame
 
 // bowling score
 
@@ -273,9 +279,8 @@ function StateNewGame() {
 
 function StateBall1() {
 	ResetEverything(); // reset pins, camera and ball
-	roll = 1;
+	roll = Roll.Ball1;
 	state="StateRolling";
-	// need to check for end of game, i.e. frame 10
 }
 
 function StateBall2() {
@@ -284,7 +289,7 @@ function StateBall2() {
 	} else {
 		ResetBall();
 	}
-	roll = 2;
+	roll = Roll.Ball2;
 	state="StateRolling";
 }
 
@@ -294,12 +299,11 @@ function StateBall3() {
 	} else {
 		ResetBall();
 	}
-	roll = 3;
+	roll = Roll.Ball3;
 	state="StateRolling";
 }
 
 function StateRolling() {
-	// modify this roll-finished test according to your game
 	while (ball.transform.position.y>sunkHeight && GetPinsDown()<10) {
 		yield;
 	}
@@ -308,15 +312,15 @@ function StateRolling() {
 
 function StateRollOver() {
 	switch (roll) {
-		case 1:	SetBall1Score(); break;
-		case 2: SetBall2Score(); break;
-		case 3: SetBall3Score(); break;
+		case Roll.Ball1: SetBall1Score(); break;
+		case Roll.Ball2: SetBall2Score(); break;
+		case Roll.Ball3: SetBall3Score(); break;
 	}
-	if (roll == 1 && IsStrike(frame)) {
+	if (roll == Roll.Ball1 && IsStrike(frame)) {
 		state = "StateStrike";
 		return;
 	}
-	if (roll == 2 && IsSpare(frame)) {
+	if (roll == Roll.Ball2 && IsSpare(frame)) {
 		state = "StateSpare";
 		return;
 	}
@@ -356,10 +360,10 @@ function StateKnockedSomeDown() {
 function StateNextBall() {
 	if (frame == 9) {
 		switch (roll) {
-			case 1:
+			case Roll.Ball1:
 			 state = "StateBall2";
 			 break;
-			case 2:
+			case Roll.Ball2:
 				if (IsSpare(frame) || IsStrike(frame)) {
 					state = "StateBall3";
 				} else {
@@ -371,7 +375,7 @@ function StateNextBall() {
 					}
 				}
 				break;
-			case 3:
+			case Roll.Ball3:
 				if (++currentplayer < numplayers) {
 						//UpdateName();
 						state = "StateBall1";
@@ -380,7 +384,7 @@ function StateNextBall() {
 					}
 				return;
 		}
-	} else if (roll == 1 && !IsStrike(frame)) {
+	} else if (roll == Roll.Ball1 && !IsStrike(frame)) {
 				state = "StateBall2";
 			} else {
 				if (++currentplayer < numplayers) {
