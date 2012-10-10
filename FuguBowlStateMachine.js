@@ -163,7 +163,7 @@ function SetSpareScore(f:int) {
 static function GetCurrentPlayer():Player {
 	return players[currentplayer];
 }
-
+/*
 static function GetPlayerName(p:int) {
 	return players[p].name;
 }
@@ -171,18 +171,19 @@ static function GetPlayerName(p:int) {
 static function GetCurrentScores():FrameScore[] {
 	return GetCurrentScores(currentplayer);
 }
+*/
 
 static function GetCurrentScores(p:int):FrameScore[] {
 	return players[p].scores;
 }
-
+/*
 static function GetSinglePlayerScore():int {
 	return GetScore(9,0);
 }
 
 static function GetScore(f:int):int {
 	return GetScore(f,currentplayer);
-}
+} */
 
 // return score for given player and frame, -1 if score has not finalized
 static function GetScore(f:int, playerindex:int):int {
@@ -227,7 +228,7 @@ function ResetBall() {
 }
 
 function ResetPins() {
-	for (var pin:Transform in pins) {
+	for (var pin:GameObject in pins) {
 		pin.SendMessage("ResetPosition");
 	}
 }
