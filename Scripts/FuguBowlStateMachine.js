@@ -3,7 +3,7 @@
 var ball:GameObject;
 var waitBeforeRoll:float = 2.0;
 
-var pin:Transform; // pin prefab to instantiate
+var pin:GameObject; // pin prefab to instantiate
 var pinPos:Vector3 = Vector3(0,0,20); // position to place rack of pins
 var pinDistance = 1.0; // initial distance between pins
 var pinRows = 4; // number of pin rows
@@ -245,8 +245,8 @@ function ResetEverything() {
 
 function GetPinsDown() {
 	var knockedOver = 0;
-	for (var pin:Transform in pins) {
-		if (transform.localEulerAngles.x>knockedAngle ||
+	for (var pin:GameObject in pins) {
+		if (pin.transform.localEulerAngles.x>knockedAngle ||
 		    pin.transform.localEulerAngles.z>knockedAngle) 
 			++knockedOver;
 	}
@@ -260,8 +260,8 @@ private var state:String;
 function Start() {
 	InitPlayers();
 	CreatePins();
-	yield WaitForSeconds(waitBeforeRoll);
-	ball.GetComponent(FuguForce).enabled = true;
+//	yield WaitForSeconds(waitBeforeRoll);
+//	ball.GetComponent(FuguBowlForce).enabled = true;
 	state="StateNewGame";
 	while (true) {
 		Debug.Log("State "+state);

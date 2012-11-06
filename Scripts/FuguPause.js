@@ -24,6 +24,8 @@ var credits:String[]=[
 	"Copyright (c) 2012 Technicat, LLC. All Rights Reserved.",
 	"More information at http://fugugames.com/"] ;
 
+var shakeThreshold:float = 5.0;
+
 enum Page {
 	None,Main,Options,Credits,Help
 }
@@ -38,8 +40,19 @@ private var currentPage:Page;
 private var fpsarray:int[];
 private var fps:float;
 
+// make these floats so that we can multiply without always rounding to an int
+private var screenWidth:float;
+private var screenHeight:float;
+
 function Awake() {
 	fpsarray = new int[Screen.width];
+#if UNITY_IPHONE
+	screenWidth = Screen.width;
+	screenHeight = Screen.height;
+#else
+	screenWidth = 400;
+	screenHeight = 400;
+#endif
 }
 
 function Start() {
@@ -49,7 +62,12 @@ function Start() {
 }
 
 function Update() {
-	if (Input.GetKeyDown("escape"))	{
+#if !UNITY_IPHONE
+	if (Input.GetKeyDown(KeyCode.Escape))
+#else
+	if (Input.acceleration.sqrMagnitude>shakeThreshold)
+#endif
+	{
 		switch (currentPage) {
 		case Page.None: PauseGame(); break; // if the pause menu is not displayed, then pause
 		case Page.Main: UnPauseGame(); break; // if the main pause menu is displaying, then unpause
@@ -58,8 +76,14 @@ function Update() {
 	}
 }
 
+var baseScreenWidth:float = 320.0;
+
 function OnGUI () {
 	if (IsGamePaused()) {
+		#if UNITY_IPHONE
+		var guiScale:float = Screen.width/baseScreenWidth;
+		GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
+		#endif
 		if (skin != null) {
 			GUI.skin = skin;
 		} else {
@@ -135,18 +159,23 @@ function ShowAudio() {
 }
 
 function BeginPage(width:int,height:int) {
-	 GUILayout.BeginArea(Rect((Screen.width-width)/2,menutop,width,height));
+#if !UNITY_IPHONE
+	 GUILayout.BeginArea(Rect((screenWidth-width)/2,menutop,width,height));
+#else
+	 GUILayout.BeginArea(Rect((baseScreenWidth-width)/2,menutop,width,height));
+#endif
 }
 
 function EndPage() {
-	GUILayout.EndArea();
-	if (currentPage != Page.Main) {
-		ShowBackButton();
+	// show Back button if not Main page
+	if (currentPage != Page.Main && GUILayout.Button("Back")) {
+		currentPage = Page.Main;
 	}
+	GUILayout.EndArea();
 }
 
 function ShowBackButton() {
-	if (GUI.Button(Rect(20,Screen.height-50,50,20),"Back")) {
+	if (GUI.Button(Rect(20,screenHeight-50,50,20),"Back")) {
 		currentPage = Page.Main;
 	}
 }
@@ -157,7 +186,7 @@ function IsBeginning() {
 }
 
 function ShowPauseMenu() {
-	BeginPage(200,200);
+	BeginPage(150,300);
 	if (GUILayout.Button (IsBeginning() ? "Play" : "Continue")) {
 		UnPauseGame();
 	}
@@ -167,9 +196,11 @@ function ShowPauseMenu() {
 	if (GUILayout.Button ("Credits")) {
 		currentPage = Page.Credits;
 	}
+	#if !UNITY_IPHONE
 	if (GUILayout.Button ("Quit")) {
 		Application.Quit();
 	}
+	#endif
 	if (IsBeginning()) {
 		GUILayout.Label(goal);
 		GUILayout.Label("Hit ESC key to pause");
