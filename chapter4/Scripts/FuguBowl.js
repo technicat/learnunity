@@ -75,21 +75,3 @@ function Update() {
 	}
 }
 
-/*
-function Update() {
-	knockedOver = 0;
-	for (var pin:Transform in pins) {
-		if (transform.localEulerAngles.x>knockedAngle ||
-			pin.transform.localEulerAngles.z>knockedAngle) 
-			++knockedOver;
-		}
-	} */
-/*
-function ResetPosition() {
-	for (var pin:Transform in pins) {
-		var ball:BowlingBall = pin.GetComponent(BowlingBall);
-		ball.ResetPosition();
-	}
-	knockedOver = 0;
-}
-*/

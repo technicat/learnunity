@@ -329,7 +329,6 @@ function StateRollOver() {
 }
 
 function StateSpare() {
-//	BroadcastMessage("Score","Spare!");
 	var audio:AudioSource = GetComponent(AudioSource);
 	if (audio) {
 		audio.clip=cheer;
@@ -339,7 +338,6 @@ function StateSpare() {
 }
 
 function StateStrike() {
-//	BroadcastMessage("Score","Strike!");
 	var audio:AudioSource = GetComponent(AudioSource);
 	if (audio) {
 		audio.clip=cheer;
@@ -349,7 +347,6 @@ function StateStrike() {
 }
 
 function StateKnockedSomeDown() {
-//	BroadcastMessage("Score",""+GetPinsDown()+" pins!");
 	var audio:AudioSource = GetComponent(AudioSource);
 	if (audio) {
 		audio.clip=OK;
