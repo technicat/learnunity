@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 566319646196f405b9038dead591c03e
+labels:
+- Cat
 TextureImporter:
   serializedVersion: 2
   mipmaps:
