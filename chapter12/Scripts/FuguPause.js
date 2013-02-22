@@ -46,8 +46,13 @@ private var screenHeight:float;
 
 function Awake() {
 	fpsarray = new int[Screen.width];
+#if UNITY_IPHONE
+	screenWidth = Screen.width;
+	screenHeight = Screen.height;
+#else
 	screenWidth = 400;
 	screenHeight = 400;
+#endif
 }
 
 function Start() {
@@ -57,7 +62,11 @@ function Start() {
 }
 
 function Update() {
+#if !UNITY_IPHONE
 	if (Input.GetKeyDown(KeyCode.Escape))
+#else
+	if (Input.acceleration.sqrMagnitude>shakeThreshold)
+#endif
 	{
 		switch (currentPage) {
 		case Page.None: PauseGame(); break; // if the pause menu is not displayed, then pause
@@ -67,8 +76,14 @@ function Update() {
 	}
 }
 
+var baseScreenWidth:float = 320.0;
+
 function OnGUI () {
 	if (IsGamePaused()) {
+		#if UNITY_IPHONE
+		var guiScale:float = Screen.width/baseScreenWidth;
+		GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
+		#endif
 		if (skin != null) {
 			GUI.skin = skin;
 		} else {
@@ -144,7 +159,11 @@ function ShowAudio() {
 }
 
 function BeginPage(width:int,height:int) {
-	GUILayout.BeginArea(Rect((screenWidth-width)/2,menutop,width,height));
+#if !UNITY_IPHONE
+	 GUILayout.BeginArea(Rect((screenWidth-width)/2,menutop,width,height));
+#else
+	 GUILayout.BeginArea(Rect((baseScreenWidth-width)/2,menutop,width,height));
+#endif
 }
 
 function EndPage() {
@@ -177,8 +196,11 @@ function ShowPauseMenu() {
 	if (GUILayout.Button ("Credits")) {
 		currentPage = Page.Credits;
 	}
+	#if !UNITY_IPHONE
 	if (GUILayout.Button ("Quit")) {
 		Application.Quit();
+	}
+	#endif
 	if (IsBeginning()) {
 		GUILayout.Label(goal);
 		GUILayout.Label("Hit ESC key to pause");
