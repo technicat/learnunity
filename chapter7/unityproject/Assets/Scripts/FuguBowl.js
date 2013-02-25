@@ -32,7 +32,7 @@ function CreatePins() {
 }
 
 function Update() {
-	if (ball.transform.position.y<sunkHeight || GetPinsDown()==10) {
+	if (ball.transform.position.y<sunkHeight) {
 		ResetEverything();
 	}
 }
@@ -55,15 +55,5 @@ function ResetEverything() {
 	ResetBall();
 	ResetPins();
 	ResetCamera();
-}
-
-function GetPinsDown() {
-	var knockedOver = 0;
-	for (var pin:GameObject in pins) {
-		if (transform.localEulerAngles.x>knockedAngle ||
-		    pin.transform.localEulerAngles.z>knockedAngle) 
-			++knockedOver;
-	}
-	return knockedOver;
 }
 
