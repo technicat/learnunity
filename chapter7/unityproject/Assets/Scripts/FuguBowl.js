@@ -1,13 +1,12 @@
 #pragma strict
+#pragma downcast
 
 var pin:GameObject; // pin prefab to instantiate
 var pinPos:Vector3 = Vector3(0,1,20); // position to place rack of pins
-
 var pinDistance = 1.5; // initial distance between pins
 var pinRows = 4; // number of pin rows
 
 var ball:GameObject; // the bowling ball
-
 var sunkHeight:float = -10.0; // fall below this y position and we have a gutterball
 
 private var pins:Array;
