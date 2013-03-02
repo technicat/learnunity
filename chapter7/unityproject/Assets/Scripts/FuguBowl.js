@@ -8,12 +8,11 @@ var pinRows = 4; // number of pin rows
 
 var ball:GameObject; // the bowling ball
 
-var knockedAngle = 45.0;
-var sunkHeight:float = -10.0;
+var sunkHeight:float = -10.0; // fall below this y position and we have a gutterball
 
 private var pins:Array;
 
-function Start () {
+function Awake () {
 	CreatePins();
 }
 
