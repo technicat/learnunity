@@ -1,3 +1,10 @@
+/*
+Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
+http://github.com/technicat/LearnUnity
+*/
+
+// HyperBowl-style bowling ball control
+
 #pragma strict
 
 var mousepowerx:float = 1.0;

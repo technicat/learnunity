@@ -1,3 +1,10 @@
+/*
+Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
+http://github.com/technicat/LearnUnity
+*/
+
+// various ways to rotate
+
 #pragma strict
 
 var speed:float = 10.0; // controls how fast we rotate

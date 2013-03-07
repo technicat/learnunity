@@ -1,4 +1,9 @@
-// this script provides a ResetPosition function that restores a GameObject to its initial position and rotation
+/*
+Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
+http://github.com/technicat/LearnUnity
+*/
+
+// restore GameObject to its original position and rotation
 
 #pragma strict
 

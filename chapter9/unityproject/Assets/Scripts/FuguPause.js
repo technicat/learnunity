@@ -1,8 +1,12 @@
-/* Copyright (c) 2007-20012 Technicat, LLC */
+/*
+Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
+http://github.com/technicat/LearnUnity
+*/
+
+// UnityGUI-based pause menu
 
 #pragma strict
 
-// note a version of this pause menu is also on the Unify wiki and there is a discussion thread specifically for it on the Unity forum
 var skin:GUISkin;
 
 var startPaused:boolean = true;
@@ -179,6 +183,7 @@ function ShowPauseMenu() {
 	}
 	if (GUILayout.Button ("Quit")) {
 		Application.Quit();
+	}
 	if (IsBeginning()) {
 		GUILayout.Label(goal);
 		GUILayout.Label("Hit ESC key to pause");
