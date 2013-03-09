@@ -8,15 +8,9 @@ http://github.com/technicat/LearnUnity
 #pragma strict
 
 var skin:GUISkin;
-
 var startPaused:boolean = true;
-
 var menutop:int=25;
-
-var pauseObjects:GameObject[]; // objects to disable on pause
-
 var goal:String = "Do you want to play a game?";
-
 var hudColor:Color = Color.white;
 
 // fill in the help text that is initially presented
@@ -27,8 +21,6 @@ var credits:String[]=[
 	"A Fugu Games Production",
 	"Copyright (c) 2012 Technicat, LLC. All Rights Reserved.",
 	"More information at http://fugugames.com/"] ;
-
-var shakeThreshold:float = 5.0;
 
 enum Page {
 	None,Main,Options,Credits,Help
