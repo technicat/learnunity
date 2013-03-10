@@ -1,6 +1,7 @@
 .DS_Store
-Library/
-Temp/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
 *.csproj
 *.pidb
 *.sln

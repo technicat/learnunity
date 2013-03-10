@@ -519,7 +519,6 @@ MonoBehaviour:
   skin: {fileID: 0}
   startPaused: 1
   menutop: 25
-  pauseObjects: []
   goal: Do you want to play a game?
   hudColor: {r: 1, g: 1, b: 1, a: 1}
   help:
@@ -528,7 +527,6 @@ MonoBehaviour:
   - A Fugu Games Production
   - Copyright (c) 2012 Technicat, LLC. All Rights Reserved.
   - More information at http://fugugames.com/
-  shakeThreshold: 5
 --- !u!1 &1617914816
 GameObject:
   m_ObjectHideFlags: 0
