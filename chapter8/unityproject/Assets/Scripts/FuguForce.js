@@ -28,11 +28,6 @@ function FixedUpdate() {
 	}
 }
 
-function CalcForce() {
-	var deltatime:float = Time.deltaTime;
-	
-}
-
 function OnCollisionEnter(collider:Collision) {
 	if (collider.gameObject.tag == "Floor") {
 		isRolling = true;
