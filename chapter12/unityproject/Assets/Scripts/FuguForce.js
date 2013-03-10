@@ -18,8 +18,17 @@ private var forcex:float=0;
 private var isRolling:boolean=false;
 
 function Update() {
-	forcex = mousepowerx*Input.GetAxis("Mouse X")/Time.deltaTime;
-	forcey = mousepowery*Input.GetAxis("Mouse Y")/Time.deltaTime;
+	forcex = 0;
+	forcey = 0;
+	if (Time.deltaTime > 0) {
+		CalcForce();
+	}
+}
+
+function CalcForce() {
+	var deltatime:float = Time.deltaTime;
+	forcey = mousepowery*Input.GetAxis("Mouse Y")/deltatime;
+	forcex = mousepowerx*Input.GetAxis("Mouse X")/deltatime;
 }
 
 function FixedUpdate() {
