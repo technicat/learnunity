@@ -18,6 +18,10 @@ var sunkHeight:float = -10.0; //
 var rolledPastTime:float = 5.0; // wait time in StateRolledPast
 var gameOverTime:float = 5.0; // wait time in StateGameOver
 
+var leaderboardID:String = "com.technicat.fugubowl.gamescore";
+var spareAchievementID:String = "com.technicat.fugubowl.spare";
+var strikeAchievementID:String = "com.technicat.fugubowl.strike";
+
 private var roll:Roll; // the current roll in the current frame
 private var frame:int=0; // current frame, ranges for 0-9 (representing 1-10)
 
@@ -199,10 +203,12 @@ function StateRollOver() {
 }
 
 function StateSpare() {
+	FuguGameCenter.Achievement(spareAchievementID,100);
 	state="StateNextBall";
 }
 
 function StateStrike() {
+	FuguGameCenter.Achievement(strikeAchievementID,100);
 	state = "StateNextBall";
 }
 
@@ -238,6 +244,7 @@ function StateNextBall() {
 
 function StateGameOver() {
 	Debug.Log("Final Score: "+player.GetScore(9));
+	FuguGameCenter.Score(leaderboardID,player.GetScore(9));
 	yield WaitForSeconds(gameOverTime);
 	state="StateNewGame";
 }

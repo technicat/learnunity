@@ -6,9 +6,14 @@ http://github.com/technicat/LearnUnity
 #pragma strict
 
 var style:GUIStyle; // customize the appearance
+var baseScreenWidth:float = 320.0; // for iOS, the screen width we think we're rendering on
+ 
 
 function OnGUI() {
-
+#if UNITY_IPHONE
+	var guiScale:float = Screen.width/baseScreenWidth;
+	GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
+#endif
 	for (var f:int=0; f<10; f++) {
 		var score:String="";
 		var roll1:int = FuguBowl.player.scores[f].ball1;
