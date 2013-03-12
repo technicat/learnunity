@@ -15,6 +15,9 @@ var pinRows = 4; // number of pin rows
 
 var sunkHeight:float = -10.0; //
 
+var rolledPastTime:float = 5.0; // wait time in StateRolledPast
+var gameOverTime:float = 5.0; // wait time in StateGameOver
+
 private var roll:Roll; // the current roll in the current frame
 private var frame:int=0; // current frame, ranges for 0-9 (representing 1-10)
 
@@ -168,7 +171,7 @@ function StateRolledPast() {
 		follow.enabled = false;
 	}
 	ball.GetComponent(FuguForce).enabled = false;
-	yield WaitForSeconds(5);
+	yield WaitForSeconds(rolledPastTime);
 	state = "StateRollOver";
 }
 
@@ -235,5 +238,6 @@ function StateNextBall() {
 
 function StateGameOver() {
 	Debug.Log("Final Score: "+player.GetScore(9));
+	yield WaitForSeconds(gameOverTime);
 	state="StateNewGame";
 }

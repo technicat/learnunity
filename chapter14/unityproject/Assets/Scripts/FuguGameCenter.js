@@ -7,8 +7,8 @@ var showAchievementBanners:boolean = true;
 function Start() {
 	Social.localUser.Authenticate (function (success) {
         if (success && showAchievementBanners) {
-		GameCenterPlatform.ShowDefaultAchievementCompletionBanner(showAchievementBanners);
-		Debug.Log ("Authenticated "+Social.localUser.userName);
+			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(showAchievementBanners);
+			Debug.Log ("Authenticated "+Social.localUser.userName);
         }
 		else {
 			Debug.Log ("Failed to authenticate "+Social.localUser.userName);
@@ -19,7 +19,11 @@ function Start() {
 static function Achievement(name:String,score:double) {
 	if (Social.localUser.authenticated) {
 		Social.ReportProgress(name,score, function(success) {
-			Debug.Log("Achievement "+name+" reported successfully");
+			if (success) {
+				Debug.Log("Achievement "+name+" reported successfully");
+			} else {
+				Debug.Log("Failed to report achievement "+name);
+			}
 		});
 	}
 }
