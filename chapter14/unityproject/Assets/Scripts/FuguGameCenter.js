@@ -5,6 +5,7 @@ import UnityEngine.SocialPlatforms.GameCenter;
 var showAchievementBanners:boolean = true;
 
 function Start() {
+#if UNITY_IPHONE
 	Social.localUser.Authenticate (function (success) {
         if (success && showAchievementBanners) {
 			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(showAchievementBanners);
@@ -14,9 +15,11 @@ function Start() {
 			Debug.Log ("Failed to authenticate "+Social.localUser.userName);
 		}
     });
+#endif
 }
 
 static function Achievement(name:String,score:double) {
+#if UNITY_IPHONE
 	if (Social.localUser.authenticated) {
 		Social.ReportProgress(name,score, function(success) {
 			if (success) {
@@ -26,9 +29,11 @@ static function Achievement(name:String,score:double) {
 			}
 		});
 	}
+#endif
 }
 
 static function Score(name:String,score:double) {
+#if UNITY_IPHONE
 	if (Social.localUser.authenticated) {
 		  Social.ReportScore (score, name, function(success) {
 			if (success) {
@@ -38,13 +43,18 @@ static function Score(name:String,score:double) {
 			}
 		});
 	}
+#endif
 }
 
 static function ShowAchievements() {
+#if UNITY_IPHONE
 	Social.ShowAchievementsUI();
+#endif
 }
 
 static function ShowScores() {
+#if UNITY_IPHONE
 	Social.ShowLeaderboardUI();
+#endif
 }
 
