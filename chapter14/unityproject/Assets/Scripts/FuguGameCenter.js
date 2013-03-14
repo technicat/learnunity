@@ -46,15 +46,4 @@ static function Score(name:String,score:double) {
 #endif
 }
 
-static function ShowAchievements() {
-#if UNITY_IPHONE
-	Social.ShowAchievementsUI();
-#endif
-}
-
-static function ShowScores() {
-#if UNITY_IPHONE
-	Social.ShowLeaderboardUI();
-#endif
-}
 

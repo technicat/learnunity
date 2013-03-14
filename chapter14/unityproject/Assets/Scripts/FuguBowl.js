@@ -18,7 +18,7 @@ var sunkHeight:float = -10.0; //
 var rolledPastTime:float = 5.0; // wait time in StateRolledPast
 var gameOverTime:float = 5.0; // wait time in StateGameOver
 
-var leaderboardID:String = "com.technicat.fugubowl.gamescore";
+var leaderboardID:String = "com.technicat.fugubowl.highscore";
 var spareAchievementID:String = "com.technicat.fugubowl.spare";
 var strikeAchievementID:String = "com.technicat.fugubowl.strike";
 

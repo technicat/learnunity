@@ -70,7 +70,6 @@ function OnGUI () {
 	if (IsGamePaused()) {
 #if UNITY_IPHONE
 		var guiScale:float = screenWidth/baseScreenWidth;
-		//GUIUtility.ScaleAroundPivot(Vector2(guiScale,guiScale),Vector2(screenWidth/2.0,screenHeight/2.0));
 		GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
 #endif
 		if (skin != null) {
@@ -116,7 +115,6 @@ function Available(isAvailable) {
 }
 
 function ShowSystem() {
-//	GUILayout.Label ("Unity player version "+Application.unityVersion);
 	GUILayout.Label("Graphics: "+SystemInfo.graphicsDeviceName+" "+
 	SystemInfo.graphicsMemorySize+"MB\n"+
 	SystemInfo.graphicsDeviceVersion+"\n"+
@@ -163,11 +161,6 @@ function EndPage() {
 	GUILayout.EndArea();
 }
 
-function ShowBackButton() {
-	if (GUI.Button(Rect(20,Screen.height-50,50,20),"Back")) {
-		currentPage = Page.Main;
-	}
-}
 
 function ShowPauseMenu() {
 	BeginPage(150,300);
@@ -180,13 +173,15 @@ function ShowPauseMenu() {
 	if (GUILayout.Button ("Credits")) {
 		currentPage = Page.Credits;
 	}
+#if UNITY_IPHONE
 	if (GUILayout.Button ("High Scores")) {
-		FuguGameCenter.ShowScores();
+		Social.ShowLeaderboardUI();
 	}
 	if (GUILayout.Button ("Achievements")) {
-		FuguGameCenter.ShowAchievements();
+		Social.ShowAchievementsUI();
 	}
-#if !UNITY_IPHONE
+#endif
+#if !UNITY_IPHONE && !UNITY_WEBPLAYER
 	if (GUILayout.Button ("Quit")) {
 		Application.Quit();
 	}
