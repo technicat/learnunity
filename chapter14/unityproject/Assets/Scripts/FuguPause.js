@@ -181,7 +181,7 @@ function ShowPauseMenu() {
 		Social.ShowAchievementsUI();
 	}
 #endif
-#if !UNITY_IPHONE && !UNITY_WEBPLAYER
+#if !UNITY_IPHONE && !UNITY_WEBPLAYER && !UNITY_EDITOR
 	if (GUILayout.Button ("Quit")) {
 		Application.Quit();
 	}

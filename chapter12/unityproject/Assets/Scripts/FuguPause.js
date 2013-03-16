@@ -18,15 +18,12 @@ var credits:String[]=[
 	"Copyright (c) 2012 Technicat, LLC. All Rights Reserved.",
 	"More information at http://fugugames.com/"] ;
 	
-var shakeThreshold:float = 5.0;
-	
 var baseScreenWidth:float = 320.0; // target screen width on iOS
 
 enum Page {
 	None,Main,Options,Credits,Help
 }
 
-private var startTime = 0.1;
 private var savedTimeScale:float;
 
 private var currentPage:Page;
@@ -52,12 +49,7 @@ function Start() {
 }
 
 function Update() {
-#if !UNITY_IPHONE
-	if (Input.GetKeyDown(KeyCode.Escape))
-#else
-	if (Input.acceleration.sqrMagnitude>shakeThreshold)
-#endif
-	{
+	if (Input.GetKeyDown(KeyCode.Escape)) {
 		switch (currentPage) {
 			case Page.None: PauseGame(); break; // if the pause menu is not displayed, then pause
 			case Page.Main: UnPauseGame(); break; // if the main pause menu is displaying, then unpause

@@ -10,11 +10,7 @@ http://github.com/technicat/LearnUnity
 var skin:GUISkin;
 var startPaused:boolean = true;
 var menutop:int=25;
-var goal:String = "Do you want to play a game?";
 var hudColor:Color = Color.white;
-
-// fill in the help text that is initially presented
-var help:String[] = ["ESC - pause game"];
 
 // fill in the credit info for your game
 var credits:String[]=[
@@ -26,7 +22,6 @@ enum Page {
 	None,Main,Options,Credits,Help
 }
 
-private var startTime = 0.1;
 private var savedTimeScale:float;
 
 private var currentPage:Page;
@@ -137,20 +132,9 @@ function EndPage() {
 	GUILayout.EndArea();
 }
 
-function ShowBackButton() {
-	if (GUI.Button(Rect(20,Screen.height-50,50,20),"Back")) {
-		currentPage = Page.Main;
-	}
-}
-
-
-function IsBeginning() {
-	return Time.time < startTime;
-}
-
 function ShowPauseMenu() {
 	BeginPage(150,300);
-	if (GUILayout.Button (IsBeginning() ? "Play" : "Continue")) {
+	if (GUILayout.Button ("Play")) {
 		UnPauseGame();
 	}
 	if (GUILayout.Button ("Options")) {
@@ -159,13 +143,11 @@ function ShowPauseMenu() {
 	if (GUILayout.Button ("Credits")) {
 		currentPage = Page.Credits;
 	}
+#if !UNITY_WEBPLAYER && !UNITY_EDITOR
 	if (GUILayout.Button ("Quit")) {
 		Application.Quit();
 	}
-	if (IsBeginning()) {
-		GUILayout.Label(goal);
-		GUILayout.Label("Hit ESC key to pause");
-	}
+#endif
 	EndPage();
 }
 
