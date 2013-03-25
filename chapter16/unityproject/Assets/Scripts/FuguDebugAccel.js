@@ -1,9 +1,6 @@
 #pragma strict
 
-function Start () {
-
-}
-
 function Update () {
-	Debug.Log("accel x: "+Input.acceleration.x+" y: "+Input.acceleration.y+" z: "+Input.acceleration.z);
+	var accel:Vector3 = Input.acceleration;
+	Debug.Log("accel x: "+accel.x+" y: "+accel.y+" z: "+accel.z);
 }

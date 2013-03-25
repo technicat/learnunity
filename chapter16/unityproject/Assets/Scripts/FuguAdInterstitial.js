@@ -11,12 +11,13 @@ var waitTime:float = 2.0;
 private var ad:ADInterstitialAd = null;
 
 function Start() {
-	if (iPhone.generation == iPhoneGeneration.iPad1Gen || 
-		iPhone.generation == iPhoneGeneration.iPad2Gen || 
-		iPhone.generation == iPhoneGeneration.iPad3Gen ||
-		iPhone.generation == iPhoneGeneration.iPad4Gen ||
-		iPhone.generation == iPhoneGeneration.iPadMini1Gen ||
-		iPhone.generation == iPhoneGeneration.iPadUnknown) {
+	var gen:iPhoneGeneration = iPhone.generation;
+	if (gen == iPhoneGeneration.iPad1Gen || 
+		gen == iPhoneGeneration.iPad2Gen || 
+		gen == iPhoneGeneration.iPad3Gen ||
+		gen == iPhoneGeneration.iPad4Gen ||
+		gen == iPhoneGeneration.iPadMini1Gen ||
+		gen == iPhoneGeneration.iPadUnknown) {
 		ad = new ADInterstitialAd();
 		var startTime = Time.time;
 		while (!ad.loaded && ad.error == null && Time.time-startTime<waitTime) {

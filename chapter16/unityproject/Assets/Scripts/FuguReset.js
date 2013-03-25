@@ -10,19 +10,26 @@ http://github.com/technicat/LearnUnity
 private var startPos:Vector3;
 private var startRot:Vector3;
 
+// for performance
+private var trans:Transform = null;
+private var body:Rigidbody = null;
+
 function Awake() {
+	// cache the Transform reference
+	trans = transform;
+	body = rigidbody;
 	// save the initial position and rotation of this GameObject
-	startPos = transform.localPosition;
-	startRot = transform.localEulerAngles;
+	startPos = trans.localPosition;
+	startRot = trans.localEulerAngles;
 }
 
 function ResetPosition() {
 	// set back to initial position
-	transform.localPosition = startPos;
-	transform.localEulerAngles = startRot;
+	trans.localPosition = startPos;
+	trans.localEulerAngles = startRot;
 	// make sure we stop all physics movement
-	if (rigidbody != null) {
-		rigidbody.velocity = Vector3.zero;
-		rigidbody.angularVelocity = Vector3.zero;
+	if (body != null) {
+		body.velocity = Vector3.zero;
+		body.angularVelocity = Vector3.zero;
 	}
 }

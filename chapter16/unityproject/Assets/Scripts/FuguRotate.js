@@ -9,7 +9,10 @@ http://github.com/technicat/LearnUnity
 
 var speed:float = 10.0; // controls how fast we rotate
 
+private var trans:Transform = null;
+
 function Start () {
+	trans = transform;
 //	var object:GameObject = this.gameObject;
 //	Debug.Log("Start called on GameObject "+object.name);
 	//iTween.RotateBy(gameObject, iTween.Hash("y", 1, "time", 2, "easeType", "easeInOutBack", "loopType", "pingPong"));
@@ -17,7 +20,7 @@ function Start () {
 
 function Update () {
 	//Debug.Log("Update called at time "+Time.time);
-	transform.Rotate(Vector3.up * speed * Time.deltaTime);
+	trans.Rotate(Vector3.up * speed * Time.deltaTime);
 	//transform.Rotate(0,speed*Time.deltaTime,0);
 	//transform.Rotate(Vector3(0,speed*Time.deltaTime,0));
 	//transform.Rotate(Vector3.up,speed*Time.deltaTime,Space.World);

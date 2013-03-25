@@ -20,6 +20,12 @@ private var forcex:float=0;
 
 private var isRolling:boolean=false;
 
+private var body:Rigidbody = null;
+
+function Awake() {
+	body = rigidbody;
+}
+
 function Update() {
 	forcex = 0;
 	forcey = 0;
@@ -48,8 +54,8 @@ function CalcForce() {
 
 
 function FixedUpdate() {
-	if (isRolling && rigidbody.velocity.sqrMagnitude<maxVelocity) {
-		rigidbody.AddForce(forcex,0,forcey);
+	if (isRolling && body.velocity.sqrMagnitude<maxVelocity) {
+		body.AddForce(forcex,0,forcey);
 	}
 }
 
