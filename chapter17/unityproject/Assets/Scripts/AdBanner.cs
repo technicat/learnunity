@@ -11,10 +11,9 @@ public class AdBanner : MonoBehaviour {
 	private ADBannerView banner = null;
 		
 	void Start() {
-			StartCoroutine (StartBanner());
+		StartCoroutine (StartBanner());
 	}
 		
-	// Use this for initialization
 	private IEnumerator StartBanner () {
 		if (dontDestroy) {
 				GameObject.DontDestroyOnLoad(gameObject); // keep ad alive if we load a new scene
