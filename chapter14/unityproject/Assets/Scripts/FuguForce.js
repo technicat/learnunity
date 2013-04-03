@@ -20,6 +20,8 @@ private var forcex:float=0;
 
 private var isRolling:boolean=false;
 
+private var floorTag = "Floor";
+
 function Update() {
 	forcex = 0;
 	forcey = 0;
@@ -54,19 +56,19 @@ function FixedUpdate() {
 }
 
 function OnCollisionEnter(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		isRolling = true;
 	}
 }
 
 function OnCollisionStay(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		isRolling = true;
 	}	
 }
 
 function OnCollisionExit(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		isRolling = false;
 	}
 }

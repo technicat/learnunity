@@ -20,11 +20,7 @@ private var forcex:float=0;
 
 private var isRolling:boolean=false;
 
-private var body:Rigidbody = null;
-
-function Awake() {
-	body = rigidbody;
-}
+private var floorTag = "Floor";
 
 function Update() {
 	forcex = 0;
@@ -54,25 +50,25 @@ function CalcForce() {
 
 
 function FixedUpdate() {
-	if (isRolling && body.velocity.sqrMagnitude<maxVelocity) {
-		body.AddForce(forcex,0,forcey);
+	if (isRolling && rigidbody.velocity.sqrMagnitude<maxVelocity) {
+		rigidbody.AddForce(forcex,0,forcey);
 	}
 }
 
 function OnCollisionEnter(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		isRolling = true;
 	}
 }
 
 function OnCollisionStay(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		isRolling = true;
 	}	
 }
 
 function OnCollisionExit(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		isRolling = false;
 	}
 }

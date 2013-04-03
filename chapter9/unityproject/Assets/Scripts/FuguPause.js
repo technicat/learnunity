@@ -11,6 +11,8 @@ var skin:GUISkin;
 var startPaused:boolean = true;
 var menutop:int=25;
 var hudColor:Color = Color.white;
+private var toolbarInt:int=0;
+private var toolbarStrings: String[]= ["Audio","Graphics","System"];
 
 // fill in the credit info for your game
 var credits:String[]=[
@@ -19,13 +21,11 @@ var credits:String[]=[
 	"More information at http://fugugames.com/"] ;
 
 enum Page {
-	None,Main,Options,Credits,Help
+	None,Main,Options,Credits
 }
 
 private var savedTimeScale:float;
-
 private var currentPage:Page;
-
 
 function Start() {
 	if (startPaused) {
@@ -70,9 +70,6 @@ function ShowCredits() {
 
 // options
 
-private var toolbarInt:int=0;
-private var toolbarStrings: String[]= ["Audio","Graphics","System"];
-
 function ShowOptions() {
 	BeginPage(318,300);
 	toolbarInt = GUILayout.Toolbar (toolbarInt, toolbarStrings);
@@ -89,7 +86,6 @@ function Available(isAvailable) {
 }
 
 function ShowSystem() {
-//	GUILayout.Label ("Unity player version "+Application.unityVersion);
 	GUILayout.Label("Graphics: "+SystemInfo.graphicsDeviceName+" "+
 	SystemInfo.graphicsMemorySize+"MB\n"+
 	SystemInfo.graphicsDeviceVersion+"\n"+

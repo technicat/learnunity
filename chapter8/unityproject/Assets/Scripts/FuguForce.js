@@ -17,6 +17,8 @@ private var forcex:float=0;
 
 private var isRolling:boolean=false;
 
+private var floorTag:boolean = false;
+
 function Update() {
 	forcex = mousepowerx*Input.GetAxis("Mouse X")/Time.deltaTime;
 	forcey = mousepowery*Input.GetAxis("Mouse Y")/Time.deltaTime;
@@ -29,19 +31,19 @@ function FixedUpdate() {
 }
 
 function OnCollisionEnter(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		isRolling = true;
 	}
 }
 
 function OnCollisionStay(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		isRolling = true;
 	}	
 }
 
 function OnCollisionExit(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		isRolling = false;
 	}
 }
