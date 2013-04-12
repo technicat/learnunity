@@ -9,12 +9,15 @@ http://github.com/technicat/LearnUnity
 
 var minSpeed:float = 1.0; // actually the square of the minSpeed
 
+private var sqrMinSpeed: float = 0;
+
 private var body:Rigidbody = null;
 private var audiosrc:AudioSource;
 
 function Awake() {
 	body = rigidbody;
 	audiosrc = audio;
+	sqrMinSpeed = minSpeed*minSpeed;
 }
 
 function OnCollisionStay(collider:Collision) {
