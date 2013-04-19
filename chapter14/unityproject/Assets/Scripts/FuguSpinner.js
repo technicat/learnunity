@@ -7,13 +7,8 @@ http://github.com/technicat/LearnUnity
 #if UNITY_IPHONE
 function Start() {
 	GameObject.DontDestroyOnLoad(this.gameObject);
-	StartCoroutine(StartActivityIndicator());
-}
-
-function StartActivityIndicator () {
-	Handheld.SetActivityIndicatorStyle(iOSActivityIndicatorStyle.Gray);
+	Handheld.SetActivityIndicatorStyle(iOSActivityIndicatorStyle.WhiteLarge);
 	Handheld.StartActivityIndicator();
-	yield;
 }
 
 function OnLevelWasLoaded() {
