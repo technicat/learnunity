@@ -20,7 +20,13 @@ private var forcex:float=0;
 
 private var isRolling:boolean=false;
 
-private var floorTag = "Floor";
+private var body:Rigidbody = null;
+
+private var floorTag:String = "Floor";
+
+function Awake() {
+	body = rigidbody;
+}
 
 function Update() {
 	forcex = 0;
@@ -50,8 +56,8 @@ function CalcForce() {
 
 
 function FixedUpdate() {
-	if (isRolling && rigidbody.velocity.sqrMagnitude<maxVelocity) {
-		rigidbody.AddForce(forcex,0,forcey);
+	if (isRolling && body.velocity.sqrMagnitude<maxVelocity) {
+		body.AddForce(forcex,0,forcey);
 	}
 }
 

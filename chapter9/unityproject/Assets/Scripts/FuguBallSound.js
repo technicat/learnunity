@@ -9,13 +9,14 @@ http://github.com/technicat/LearnUnity
 
 var minSpeed:float = 1.0; // actually the square of the minSpeed
 private var sqrMinSpeed:float = 1.0;
+private var floorTag = "Floor";
 
 function Awake() {
 	sqrMinSpeed = minSpeed * minSpeed;
 }
 
 function OnCollisionStay(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		if (rigidbody.velocity.sqrMagnitude>sqrMinSpeed) {
 			if (!audio.isPlaying) {
 				audio.Play();
@@ -29,7 +30,7 @@ function OnCollisionStay(collider:Collision) {
 }
 
 function OnCollisionExit(collider:Collision) {
-	if (collider.gameObject.tag == "Floor") {
+	if (collider.gameObject.tag == floorTag) {
 		if (audio.isPlaying) {
 			audio.Stop();
 		}
