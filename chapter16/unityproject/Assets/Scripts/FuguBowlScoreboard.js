@@ -1,6 +1,6 @@
 /*
 Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
-http://github.com/technicat/LearnUnity
+http://learnunity4.com/
 */
 
 #pragma strict
@@ -8,8 +8,11 @@ http://github.com/technicat/LearnUnity
 var style:GUIStyle; // customize the appearance
 var baseScreenWidth:float = 320.0; // for iOS, the screen width we think we're rendering on
 
-function OnGUI() {
+function Awake() {
 	useGUILayout = false;
+}
+
+function OnGUI() {
 #if UNITY_IPHONE
 	var guiScale:float = Screen.width/baseScreenWidth;
 	GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
