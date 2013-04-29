@@ -1,6 +1,6 @@
 /*
 Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
-http://github.com/technicat/LearnUnity
+http://learnunity4.com/
 */
 
 // restore GameObject to its original position and rotation

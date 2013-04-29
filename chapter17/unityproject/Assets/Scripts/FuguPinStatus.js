@@ -1,3 +1,7 @@
+/*
+Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
+http://learnunity4.com/
+*/
 #pragma strict
 
 var knockedAngle:float = 45.0;
