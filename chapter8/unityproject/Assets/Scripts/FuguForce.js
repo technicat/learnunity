@@ -1,6 +1,6 @@
 /*
 Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
-http://github.com/technicat/LearnUnity
+http://learnunity4.com/
 */
 
 // HyperBowl-style bowling ball control
@@ -17,7 +17,7 @@ private var forcex:float=0;
 
 private var isRolling:boolean=false;
 
-private var floorTag:boolean = false;
+private var floorTag:String = "Floor";
 
 function Update() {
 	forcex = mousepowerx*Input.GetAxis("Mouse X")/Time.deltaTime;

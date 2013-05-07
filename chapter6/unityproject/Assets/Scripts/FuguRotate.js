@@ -1,6 +1,6 @@
 /*
 Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
-http://github.com/technicat/LearnUnity
+http://learnunity4.com/
 */
 
 // various ways to rotate
@@ -21,5 +21,5 @@ function Update () {
 	//transform.Rotate(0,speed*Time.deltaTime,0);
 	//transform.Rotate(Vector3(0,speed*Time.deltaTime,0));
 	//transform.Rotate(Vector3.up,speed*Time.deltaTime,Space.World);
-	//transform.localRotation.y += speed*Time.deltaTime;
+	//transform.localEulerAngles.y += speed*Time.deltaTime;
 }
