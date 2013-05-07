@@ -20,6 +20,15 @@ private var isRolling:boolean=false;
 private var floorTag:String = "Floor";
 
 function Update() {
+	forcex = 0;
+	forcey = 0;
+	if (Time.deltaTime > 0) {
+		CalcForce();
+	}
+}
+
+function CalcForce() {
+	var deltatime:float = Time.deltaTime;
 	forcex = mousepowerx*Input.GetAxis("Mouse X")/Time.deltaTime;
 	forcey = mousepowery*Input.GetAxis("Mouse Y")/Time.deltaTime;
 }
