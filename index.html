@@ -1,43 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
     <title>Learn Unity by technicat</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/technicat/LearnUnity">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/technicat/LearnUnity/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/technicat/LearnUnity/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <a id="forkme_banner" href="https://github.com/technicat/LearnUnity">View on GitHub</a>
+    <div class="shell">
 
-    <div class="wrapper">
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Learn Unity</h1>
+            <h2>Unity project examples for the book Learn Unity 4 for iOS Game Development</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
 
-      <section>
-        <div id="title">
-          <h1>Learn Unity</h1>
-          <p>Unity project examples for the book Learn Unity 4 for iOS Game Development</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/technicat">technicat</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
-        </div>
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/technicat/LearnUnity/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/technicat/LearnUnity/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
 
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
         <p>This is the GitHub page for the upcoming book, Learn Unity 4 for iOS Game Development, currently available as an <a href="http://www.apress.com/9781430248750">Apress alpha book</a>.</p>
 
 <p>The GitHub projects, built up cumulatively through each chapter, do not include assets from the Unity Asset Store and Standard Assets that are used in the book, but the <a href="http://hyperbowl3d.com/">HyperBowl</a>-style bowling game developed by following the book, complete with Asset Store assets and Unity Standard Assets, is <a href="https://itunes.apple.com/app/learn-unity/id634845779%20Learn%20Unity%20app">on the App Store</a>.</p>
@@ -69,13 +77,25 @@
 
 <p>You may also be interested in Sue Blackman's <a href="http://forum.unity3d.com/threads/93775-Beginning-3D-Game-Development-with-Unity/page17">Beginning 3D Game Development with Unity</a>, also from Apress.</p>
 
-<p>Technical review provided by March Shaerer of <a href="http://gayasoft.ch">Gayasoft</a>.</p>
+<p>Technical review provided by Marc Shaerer of <a href="http://gayasoft.ch">Gayasoft</a>.</p>
 
 <p><img src="http://www.fugutalk.com/wp-content/uploads/2013/04/IMG_0618.png" alt="Learn Unity app"><img src="http://www.fugutalk.com/wp-content/uploads/2013/03/9781430248750-1.jpg" alt="book cover"></p>
       </section>
 
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/technicat">technicat</a> can be found on <a href="https://github.com/technicat/LearnUnity">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
