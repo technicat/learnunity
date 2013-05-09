@@ -10,7 +10,7 @@ http://learnunity4.com/
 var mousepowerx:float = 1.0;
 var mousepowery:float = 1.0;
 
-var maxVelocity:float=400.0;
+var maxVelocitySquared:float=400.0;
 
 private var forcey:float=0;
 private var forcex:float=0;
@@ -28,13 +28,13 @@ function Update() {
 }
 
 function CalcForce() {
-	var deltatime:float = Time.deltaTime;
-	forcex = mousepowerx*Input.GetAxis("Mouse X")/Time.deltaTime;
-	forcey = mousepowery*Input.GetAxis("Mouse Y")/Time.deltaTime;
+	var deltaTime:float = Time.deltaTime;
+	forcex = mousepowerx*Input.GetAxis("Mouse X")/deltaTime;
+	forcey = mousepowery*Input.GetAxis("Mouse Y")/deltaTime;
 }
 
 function FixedUpdate() {
-	if (isRolling && rigidbody.velocity.sqrMagnitude<maxVelocity) {
+	if (isRolling && rigidbody.velocity.sqrMagnitude<maxVelocitySquared) {
 		rigidbody.AddForce(forcex,0,forcey);
 	}
 }
