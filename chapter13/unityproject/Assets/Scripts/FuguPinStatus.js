@@ -1,7 +1,10 @@
 /*
 Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
-http://github.com/technicat/LearnUnity
+http://learnunity4.com/
 */
+
+// checks if a bowling pin is knocked over
+
 #pragma strict
 
 var knockedAngle:float = 45.0;
