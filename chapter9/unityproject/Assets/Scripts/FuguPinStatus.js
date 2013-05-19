@@ -17,5 +17,6 @@ function Start () {
 
 function IsKnockedOver() {
 	return Mathf.Abs(transform.localEulerAngles.x-initialAngles.x)>knockedAngle || 
+			Mathf.Abs(transform.localEulerAngles.y-initialAngles.y)>knockedAngle || 
 			Mathf.Abs(transform.localEulerAngles.z-initialAngles.z)>knockedAngle;
 }
