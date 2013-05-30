@@ -1,6 +1,6 @@
 /*
 Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
-http://github.com/technicat/LearnUnity
+http://learnunity4.com/
 */
 
 // UnityGUI-based pause menu
@@ -181,7 +181,7 @@ function ShowPauseMenu() {
 		Social.ShowAchievementsUI();
 	}
 #endif
-#if !UNITY_IPHONE && !UNITY_WEBPLAYER && !UNITY_EDITOR
+#if !UNITY_IPHONE && !UNITY_WEBPLAYER
 	if (GUILayout.Button ("Quit")) {
 		Application.Quit();
 	}
