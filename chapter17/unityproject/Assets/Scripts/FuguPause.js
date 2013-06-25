@@ -36,7 +36,7 @@ private var screenWidth:float;
 private var screenHeight:float;
 
 function Awake() {
-#if UNITY_IPHONE
+#if UNITY_IPHONE || UNITY_ANDROID
 	screenWidth = Screen.width;
 	screenHeight = Screen.height;
 #else
@@ -68,7 +68,7 @@ function Update() {
 
 function OnGUI () {
 	if (IsGamePaused()) {
-#if UNITY_IPHONE
+#if UNITY_IPHONE || UNITY_ANDROID
 		var guiScale:float = screenWidth/baseScreenWidth;
 		GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
 #endif
@@ -146,7 +146,7 @@ function ShowAudio() {
 }
 
 function BeginPage(width:int,height:int) {
-#if !UNITY_IPHONE
+#if !UNITY_IPHONE && !UNITY_ANDROID
 	GUILayout.BeginArea(Rect((Screen.width-width)/2,menutop,width,height));
 #else
 	GUILayout.BeginArea(Rect((baseScreenWidth-width)/2,menutop,width,height));

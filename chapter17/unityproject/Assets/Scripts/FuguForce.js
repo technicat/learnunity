@@ -38,7 +38,7 @@ function Update() {
 
 function CalcForce() {
 	var deltatime:float = Time.deltaTime;
-#if UNITY_IPHONE
+#if UNITY_IPHONE || UNITY_ANDROID
 	if (Input.touchCount > 0) {
 		// Get movement of the finger since last frame
 		var touch:Touch = Input.GetTouch(0);

@@ -10,7 +10,7 @@ var baseScreenWidth:float = 320.0; // for iOS, the screen width we think we're r
 
 function OnGUI() {
 	useGUILayout = false;
-#if UNITY_IPHONE
+#if UNITY_IPHONE || UNITY_ANDROID
 	var guiScale:float = Screen.width/baseScreenWidth;
 	GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
 #endif
