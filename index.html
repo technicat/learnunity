@@ -1,38 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Learn Unity by technicat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>Learn Unity by technicat</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Learn Unity</h1>
-        <p class="header">Unity project examples for the book Learn Unity 4 for iOS Game Development</p>
+    <header>
+      <div class="inner">
+        <h1>Learn Unity</h1>
+        <h2>Unity project examples for the book Learn Unity 4 for iOS Game Development</h2>
+        <a href="https://github.com/technicat/LearnUnity" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/technicat/LearnUnity/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/technicat/LearnUnity/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/technicat/LearnUnity">View On GitHub</a></li>
-        </ul>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p><img src="http://www.fugutalk.com/wp-content/uploads/2013/06/photo.jpg" alt="book"></p>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/technicat">technicat</a></p>
-
-
-      </header>
-      <section>
-        <p><img src="http://www.fugutalk.com/wp-content/uploads/2013/03/9781430248750-1.jpg" alt="book cover"></p>
-
-<p>This is the GitHub page for the Apress book Learn Unity 4 for iOS Game Development.</p>
+<p>This is the GitHub page for the book Learn Unity 4 for iOS Game Development.</p>
 
 <p>The GitHub projects, built up cumulatively through each chapter to create a bowling game (similar in style to <a href="http://hyperbowl3d.com/">HyperBowl</a>, do not include assets from the Unity Asset Store and Standard Assets that are used in the book, but you can use them a starting point or to save time in constructing the book examples (but taking shortcuts isn't really recommended). The projects are covered under the MIT open source license.</p>
 
@@ -43,7 +41,9 @@
 
 <p>The book also covers debugging, profiling and optimization, testing with the Unity Remote and iOS Simulator, build and App Store submission procedures.</p>
 
-<p>Technical review provided by Marc Shårer of <a href="http://gayasoft.ch">Gayasoft</a>.</p>
+<p>Most of the chapters cumulatively build a 3D bowling app with the same control style as <a href="http://hyperbowl3d.com/">HyperBowl</a>, but the Angry Bots demo included with Unity is used to introduce Unity features and a simple spinning cube and dancing skeleton scene is also constructed.</p>
+
+<p>Technical review was provided by Marc Shårer of <a href="http://gayasoft.ch">Gayasoft</a>.</p>
 
 <h1>
 <a name="chapter-descriptions" class="anchor" href="#chapter-descriptions"><span class="octicon octicon-link"></span></a>Chapter Descriptions</h1>
@@ -70,9 +70,11 @@
 <a name="availability" class="anchor" href="#availability"><span class="octicon octicon-link"></span></a>Availability</h1>
 
 <ul>
-<li><a href="http://www.apress.com/9781430248750">Apress alpha book</a></li>
-<li><a href="http://www.amazon.com/Learn-Unity-iOS-Game-Development/dp/1430248750">Amazon</a></li>
-<li><a href="http://www.barnesandnoble.com/w/learn-unity-4-for-ios-game-development-philip-chu/1113931582?ean=9781430248750">Barnes and Noble</a></li>
+<li><a href="http://www.apress.com/9781430248750">Apress alpha ebook</a></li>
+<li>
+<a href="http://www.amazon.com/Learn-Unity-iOS-Game-Development/dp/1430248750">Amazon</a> (print and kindle book)</li>
+<li>
+<a href="http://www.barnesandnoble.com/w/learn-unity-4-for-ios-game-development-philip-chu/1113931582?ean=9781430248750">Barnes and Noble</a> (print and nook book)</li>
 </ul><p>Review sites:</p>
 
 <ul>
@@ -139,13 +141,26 @@
 <p>The <a href="http://hyperbowl3d.com/">HyperBowl</a>-style bowling game developed by following the book, complete with Asset Store assets and Unity Standard Assets, is <a href="https://itunes.apple.com/app/learn-unity/id634845779%20Learn%20Unity%20app">on the App Store</a>. There is also an Android version <a href="https://play.google.com/store/apps/details?id=com.technicat.HyperBowlComplete">on Google Play</a> and the <a href="http://www.amazon.com/Technicat-LLC-Learn-Unity/dp/B00DHYHKJU/ref=sr_1_14?s=mobile-apps&amp;ie=UTF8&amp;qid=1371837470&amp;sr=1-14">Amazon appstore</a>.</p>
 
 <p><img src="http://www.fugutalk.com/wp-content/uploads/2013/04/IMG_0618.png" alt="app screenshot"></p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/technicat/LearnUnity/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/technicat/LearnUnity/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/technicat/LearnUnity"></a> is maintained by <a href="https://github.com/technicat">technicat</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		          <script type="text/javascript">
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
