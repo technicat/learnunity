@@ -3,31 +3,34 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <title>Learn Unity by technicat</title>
   </head>
 
   <body>
-    <header>
+    <div id="container">
       <div class="inner">
-        <h1>Learn Unity</h1>
-        <h2>Unity project examples for the book Learn Unity 4 for iOS Game Development</h2>
-        <a href="https://github.com/technicat/LearnUnity" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
+        <header>
+          <h1>Learn Unity</h1>
+          <h2>Unity project examples for the book Learn Unity 4 for iOS Game Development</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/technicat/LearnUnity/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/technicat/LearnUnity/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/technicat/LearnUnity" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
           <p><img src="http://www.fugutalk.com/wp-content/uploads/2013/06/photo.jpg" alt="book"></p>
 
 <p>This is the GitHub page for the book Learn Unity 4 for iOS Game Development.</p>
@@ -35,6 +38,15 @@
 <p>The GitHub projects, built up cumulatively through each chapter to create a bowling game (similar in style to <a href="http://hyperbowl3d.com/">HyperBowl</a>, do not include assets from the Unity Asset Store and Standard Assets that are used in the book, but you can use them a starting point or to save time in constructing the book examples (but taking shortcuts isn't really recommended). The projects are covered under the MIT open source license.</p>
 
 <h1>
+<a name="availability" class="anchor" href="#availability"><span class="octicon octicon-link"></span></a>Availability</h1>
+
+<ul>
+<li><a href="http://www.apress.com/9781430248750">Apress alpha ebook</a></li>
+<li>
+<a href="http://www.amazon.com/Learn-Unity-iOS-Game-Development/dp/1430248750">Amazon</a> (print and kindle book)</li>
+<li>
+<a href="http://www.barnesandnoble.com/w/learn-unity-4-for-ios-game-development-philip-chu/1113931582?ean=9781430248750">Barnes and Noble</a> (print and nook book)</li>
+</ul><h1>
 <a name="summary" class="anchor" href="#summary"><span class="octicon octicon-link"></span></a>Summary</h1>
 
 <p>The book and app (see below) demonstrate Unity graphics, audio and physics, scripting in JavaScript (and a little bit of C#), touchscreen and accelerometer input, iAd banner and interstitial ads, Game Center leaderboard and achievements, complete rules for a bowling game, and utilizes free Asset Store packages.</p>
@@ -66,16 +78,7 @@
 <li>Adding banner and interstitial (full-screen) ads with iAd.</li>
 <li>Running the built-in and Editor-based profiler, optimizing code and assets for speed, size and/or quality.</li>
 <li>Misc topics: Android, C#, Editor scripting, script execution order, publishing on the Asset Store.</li>
-</ol><h1>
-<a name="availability" class="anchor" href="#availability"><span class="octicon octicon-link"></span></a>Availability</h1>
-
-<ul>
-<li><a href="http://www.apress.com/9781430248750">Apress alpha ebook</a></li>
-<li>
-<a href="http://www.amazon.com/Learn-Unity-iOS-Game-Development/dp/1430248750">Amazon</a> (print and kindle book)</li>
-<li>
-<a href="http://www.barnesandnoble.com/w/learn-unity-4-for-ios-game-development-philip-chu/1113931582?ean=9781430248750">Barnes and Noble</a> (print and nook book)</li>
-</ul><p>Review sites:</p>
+</ol><p>Review sites:</p>
 
 <ul>
 <li><a href="http://www.goodreads.com/book/show/17063557-learn-unity-4-for-ios-game-development">Goodreads</a></li>
@@ -118,18 +121,41 @@
 <a name="retail-description" class="anchor" href="#retail-description"><span class="octicon octicon-link"></span></a>Retail Description</h2>
 
 <ul>
-<li>The retail description lists the Unity's Mecanim animation system. The book does mention but does not use Mecanim. Instead, a chapter is devoted to a dancing skeleton example using Unity's Legacy animation system and a free skeleton package on the Asset Store.</li>
-<li>The retail description lists Unity's support for gyroscope on iOS devices. The book does mention but does not use Unity's gyroscope API (Input.gyroscope). The book does describe how to access the touchscreen (Input.touches), accelerometer (Input.accelerometer), and webcam (WebCamTexture).</li>
+<li>Some retail descriptions list Unity's Mecanim animation system. The book does mention but does not use Mecanim. Instead, a chapter is devoted to a dancing skeleton example using Unity's Legacy animation system and a free skeleton package on the Asset Store.</li>
+<li>Some retail descriptions list Unity's support for gyroscope on iOS devices. The book does mention but does not use Unity's gyroscope API (Input.gyroscope). The book does describe how to access the touchscreen (Input.touches), accelerometer (Input.accelerometer), and webcam (WebCamTexture).</li>
 </ul><h2>
-<a name="chapter-1" class="anchor" href="#chapter-1"><span class="octicon octicon-link"></span></a>Chapter 1</h2>
+<a name="ebooks" class="anchor" href="#ebooks"><span class="octicon octicon-link"></span></a>Ebooks</h2>
+
+<h3>
+<a name="apress-alpha" class="anchor" href="#apress-alpha"><span class="octicon octicon-link"></span></a>Apress alpha</h3>
+
+<p>Still alpha. Hasn't been updated to the final copy.</p>
+
+<h3>
+<a name="nook" class="anchor" href="#nook"><span class="octicon octicon-link"></span></a>Nook</h3>
+
+<p>URL's display with markup and are not active as links.</p>
+
+<h3>
+<a name="kindle" class="anchor" href="#kindle"><span class="octicon octicon-link"></span></a>Kindle</h3>
+
+<p>No problems so far. Links work fine.</p>
+
+<h2>
+<a name="chapters" class="anchor" href="#chapters"><span class="octicon octicon-link"></span></a>Chapters</h2>
+
+<h3>
+<a name="chapter-1" class="anchor" href="#chapter-1"><span class="octicon octicon-link"></span></a>Chapter 1</h3>
 
 <ul>
-<li>Unity iOS Basic is now free and no longer $400 (yay!) same for Unity Android Basic, by the way.</li>
-</ul><h2>
-<a name="chapter-2" class="anchor" href="#chapter-2"><span class="octicon octicon-link"></span></a>Chapter 2</h2>
+<li>page 25: The free version of Unity does now include Unity iOS Basic, which no longer costs $400.</li>
+<li>page 27: "The 3D game engines are very complicated" should read "3D game engines are very complicated"</li>
+</ul><h3>
+<a name="chapter-2" class="anchor" href="#chapter-2"><span class="octicon octicon-link"></span></a>Chapter 2</h3>
 
 <ul>
-<li>Chapter 2 has a mangled phrase like "function is called a Log.DebugLog". It should be "called the function Debug.Log"</li>
+<li>page 33: "go ahead and buildl an OS X app" should read "go ahead and build an OS X app"</li>
+<li>a mangled phrase like "function is called a Log.DebugLog". It should be "called the function Debug.Log"</li>
 </ul><h1>
 <a name="other-books" class="anchor" href="#other-books"><span class="octicon octicon-link"></span></a>Other Books</h1>
 
@@ -143,24 +169,12 @@
 <p><img src="http://www.fugutalk.com/wp-content/uploads/2013/04/IMG_0618.png" alt="app screenshot"></p>
         </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/technicat/LearnUnity/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/technicat/LearnUnity/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+        <footer>
+          Learn Unity is maintained by <a href="https://github.com/technicat">technicat</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
 
-          <p class="repo-owner"><a href="https://github.com/technicat/LearnUnity"></a> is maintained by <a href="https://github.com/technicat">technicat</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
-
-            <script type="text/javascript">
+                  <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -171,5 +185,7 @@
             } catch(err) {}
           </script>
 
+      </div>
+    </div>
   </body>
 </html>
