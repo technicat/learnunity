@@ -69,102 +69,16 @@
 <li><a href="http://www.powells.com/biblio/61-9781430248750-0">Powell's</a></li>
 <li>
 <a href="http://m.safaribooksonline.com/hd/public/catalog?isbn=9781430248750">Safari Books</a> (subscription)</li>
-</ul><p>The book introduces Unity starting with installation and activation, learning the interface with the included Angry Bots demo, and then builds up successively more elaborate project examples from scratch and using free assets from the Unity Asset Store.</p>
+</ul><p>Some retail descriptions list Unity's Mecanim animation system. The book does mention but does not use Mecanim. Instead, a chapter is devoted to a dancing skeleton example using Unity's Legacy animation system and a free skeleton package on the Asset Store. Also, some retail descriptions list Unity's support for gyroscope on iOS devices. The book does mention but does not use Unity's gyroscope API (Input.gyroscope). The book does describe how to access the touchscreen (Input.touches), accelerometer (Input.accelerometer), and webcam (WebCamTexture).</p>
+
+<p>The book introduces Unity starting with installation and activation, learning the interface with the included Angry Bots demo, and then builds up successively more elaborate project examples from scratch and using free assets from the Unity Asset Store.</p>
 
 <p>A simple spinning cube and dancing skeleton scene is constructed, but most of the book is devoted to building a 3D bowling game with the control style of <a href="http://hyperbowl3d.com/">HyperBowl</a>. The game is first developed and tested in the Unity Editor, incorporating graphics, scripting (with JavaScript), physics, sound, user interface, complete rules for a bowling game, and mouse controls. The game is then adapted to run on iOS with touchscreen and (a little bit of) accelerometer input. Testing with the Unity Remote, iOS Simulator and real devices is explained, Game Center and iAd integration is covered, and then optimization techniques are described. The book concludes with a brief treatment of miscellaneous topics such as C# scripting, Unity Editor scripting, Android development, and tracking and promoting sales.</p>
 
 <p>Technical review was provided by Marc Shårer of <a href="http://gayasoft.ch">Gayasoft</a>.</p>
 
 <h2>
-<a name="chapter-contents" class="anchor" href="#chapter-contents"><span class="octicon octicon-link"></span></a>Chapter Contents</h2>
-
-<h3>
-<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h3>
-
-<p>Download and install Unity, license activation, bug reporting, getting help.</p>
-
-<h3>
-<a name="a-unity-tour" class="anchor" href="#a-unity-tour"><span class="octicon octicon-link"></span></a>A Unity Tour</h3>
-
-<p>Use the Angry Bots demo to learn the Unity user interface: built-in and custom layouts, the Scene, Game, Hierarchy, Inspector and Project Views, how to open a project, open a scene and play a scene.</p>
-
-<h3>
-<a name="making-a-scene" class="anchor" href="#making-a-scene"><span class="octicon octicon-link"></span></a>Making a Scene</h3>
-
-<p>Create a new scene with primitive objects, lighting, skybox, camera control, importing Standard Assets, and making prefabs.</p>
-
-<h3>
-<a name="making-it-move-scripting-the-cube" class="anchor" href="#making-it-move-scripting-the-cube"><span class="octicon octicon-link"></span></a>Making it Move: Scripting the Cube</h3>
-
-<p>Create scripts, understanding callbacks, editing with MonoDevelop, debugging with MonoDevelop.</p>
-
-<h3>
-<a name="lets-dance-animation-and-sound" class="anchor" href="#lets-dance-animation-and-sound"><span class="octicon octicon-link"></span></a>Let's Dance! Animation and Sound</h3>
-
-<p>Create a dancing skeleton scene by importing a free skeleton package from the Asset Store, selecting and looping a dance animation, importing and looping music, adding a floor, activating dynamic shadows.</p>
-
-<h3>
-<a name="lets-roll-physics-and-controls" class="anchor" href="#lets-roll-physics-and-controls"><span class="octicon octicon-link"></span></a>Let's Roll! Physics and Controls</h3>
-
-<p>Start a new bowling game scene: add a bowling ball, add physics materials and rigidbodies, script a physics-based bowing ball controls.</p>
-
-<h3>
-<a name="lets-bowl-advanced-physics" class="anchor" href="#lets-bowl-advanced-physics"><span class="octicon octicon-link"></span></a>Let's Bowl! Advanced Physics</h3>
-
-<p>Add bowling pins, a bowling ball game controller, pin collision sounds, ball rolling sound, collision callbacks.</p>
-
-<h3>
-<a name="lets-play-scripting-the-game" class="anchor" href="#lets-play-scripting-the-game"><span class="octicon octicon-link"></span></a>Let's Play! Scripting the Game</h3>
-
-<p>Implement complete bowling game rules as a finite state machine, using coroutines.</p>
-
-<h3>
-<a name="the-game-gui" class="anchor" href="#the-game-gui"><span class="octicon octicon-link"></span></a>The Game GUI</h3>
-
-<p>Implement a scoreboard and pause menu using UnityGUI.</p>
-
-<h3>
-<a name="using-unity-ios" class="anchor" href="#using-unity-ios"><span class="octicon octicon-link"></span></a>Using Unity iOS</h3>
-
-<p>Build Angry Bots as an iOS app, testing it in the Editor with Unity Remote and on the iOS Simulator in Xcode.</p>
-
-<h3>
-<a name="building-for-real-device-testing-and-app-submission" class="anchor" href="#building-for-real-device-testing-and-app-submission"><span class="octicon octicon-link"></span></a>Building for Real: Device Testing and App Submission</h3>
-
-<p>Set up provisioning profiles and test devices on the Provisioning Portal, setting up an app on iTunes Connect, build and run Angry Bots for testing and distribution.</p>
-
-<h3>
-<a name="presentation-screens-and-icons" class="anchor" href="#presentation-screens-and-icons"><span class="octicon octicon-link"></span></a>Presentation: Screens and Icons</h3>
-
-<p>Back to bowling: adding icons and splash screens, specifying screen orientation, dislaying activity indicators, scaling UnityGUI for different screen resolutions.</p>
-
-<h3>
-<a name="handling-device-input" class="anchor" href="#handling-device-input"><span class="octicon octicon-link"></span></a>Handling Device Input</h3>
-
-<p>Add touchscreen controls, detecting shakes with the accelerometer, displaying a video texture with the iOS camera as a webcam.</p>
-
-<h3>
-<a name="game-center-leaderboards-and-achievements" class="anchor" href="#game-center-leaderboards-and-achievements"><span class="octicon octicon-link"></span></a>Game Center: Leaderboards and Achievements</h3>
-
-<p>Set up Game Center leaderboards and achievements in iTunes Connect and use the Unity Social class to access them.</p>
-
-<h3>
-<a name="iad-banner-ads-and-interstitial-ads" class="anchor" href="#iad-banner-ads-and-interstitial-ads"><span class="octicon octicon-link"></span></a>iAd: Banner Ads and Interstitial Ads</h3>
-
-<p>Add banner and interstitial (full-screen) ads with iAd.</p>
-
-<h3>
-<a name="optimization" class="anchor" href="#optimization"><span class="octicon octicon-link"></span></a>Optimization</h3>
-
-<p>Run the built-in and Editor-based profiler, optimizing code and assets for speed, size and/or quality.</p>
-
-<h3>
-<a name="where-to-go-from-here" class="anchor" href="#where-to-go-from-here"><span class="octicon octicon-link"></span></a>Where to Go from Here?</h3>
-
-<p>Misc topics: Android, C#, Editor scripting, script execution order, publishing on the Asset Store.</p>
-
-<h1>
-<a name="asset-store" class="anchor" href="#asset-store"><span class="octicon octicon-link"></span></a>Asset Store</h1>
+<a name="asset-store" class="anchor" href="#asset-store"><span class="octicon octicon-link"></span></a>Asset Store</h2>
 
 <p>The book utilizes free packages from the Unity Asset Store:</p>
 
@@ -203,21 +117,12 @@
 <li><a href="http://gameassets.net">GUIKit001</a></li>
 <li><a href="http://fatalfrog.com/">Finger Gestures</a></li>
 <li><a href="http://corruptedsmilestudio.blogspot.com/">Jukebox Free</a></li>
-</ul><h1>
-<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h1>
+</ul><h2>
+<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h2>
 
 <p>Questions can be posted on the <a href="http://forum.unity3d.com/threads/173210-Learn-Unity-for-iOS-Game-Development">Unity forum</a>, any of my Facebook pages (<a href="http://facebook.com/technicatllc">Technicat</a>, <a href="http://facebook.com/fugugames">Fugu Games</a> or <a href="http://facebook.com/hyperbowl">HyperBowl</a>) and on <a href="http://twitter.com/fugugames">twitter</a>.</p>
 
-<h1>
-<a name="corrections-and-clarifications" class="anchor" href="#corrections-and-clarifications"><span class="octicon octicon-link"></span></a>Corrections and Clarifications</h1>
-
 <h2>
-<a name="retail-description" class="anchor" href="#retail-description"><span class="octicon octicon-link"></span></a>Retail Description</h2>
-
-<ul>
-<li>Some retail descriptions list Unity's Mecanim animation system. The book does mention but does not use Mecanim. Instead, a chapter is devoted to a dancing skeleton example using Unity's Legacy animation system and a free skeleton package on the Asset Store.</li>
-<li>Some retail descriptions list Unity's support for gyroscope on iOS devices. The book does mention but does not use Unity's gyroscope API (Input.gyroscope). The book does describe how to access the touchscreen (Input.touches), accelerometer (Input.accelerometer), and webcam (WebCamTexture).</li>
-</ul><h2>
 <a name="ebooks" class="anchor" href="#ebooks"><span class="octicon octicon-link"></span></a>Ebooks</h2>
 
 <h3>
@@ -241,7 +146,7 @@
 <ul>
 <li>URL's display with markup and are not active as links (you can check the sample to see if it's been fixed.</li>
 </ul><h2>
-<a name="text" class="anchor" href="#text"><span class="octicon octicon-link"></span></a>Text</h2>
+<a name="contents-clarifications-and-corrections" class="anchor" href="#contents-clarifications-and-corrections"><span class="octicon octicon-link"></span></a>Contents, Clarifications, and Corrections</h2>
 
 <p>Page numbers correspond to the print version. Links are provided to the online Unity documentation cited in the Explore Further sections.</p>
 
@@ -262,7 +167,9 @@
 </ul><p>A full list of Unity books is available at <a href="http://www.gamefromscratch.com/page/Unity-Book-Roundup.aspx">Games from Scratch</a></p>
 
 <h3>
-<a name="chapter-1" class="anchor" href="#chapter-1"><span class="octicon octicon-link"></span></a>Chapter 1</h3>
+<a name="chapter-1---getting-started" class="anchor" href="#chapter-1---getting-started"><span class="octicon octicon-link"></span></a>Chapter 1 - Getting Started</h3>
+
+<p>Download and install Unity, activate the license, report bugs, get help.</p>
 
 <ul>
 <li>page 3: "OSX installer package" should read "OS X installer package"</li>
@@ -271,29 +178,41 @@
 <li>page 7: The free version of Unity now includes Unity iOS Basic (no longer $400!)</li>
 <li>page 13: "The 3D game engines are very complicated" should read "3D game engines are very complicated"</li>
 </ul><h3>
-<a name="chapter-2" class="anchor" href="#chapter-2"><span class="octicon octicon-link"></span></a>Chapter 2</h3>
+<a name="chapter-2---a-unity-tour" class="anchor" href="#chapter-2---a-unity-tour"><span class="octicon octicon-link"></span></a>Chapter 2 - A Unity Tour</h3>
+
+<p>Use the Angry Bots demo to explore the Unity Editor.</p>
 
 <ul>
 <li>page 25: "go ahead and buildl an OS X app" should read "go ahead and build an OS X app"</li>
 <li>page 58: "Console" and "Console view" should read "Console View" (for consistency, we include "View" in the  view name and capitalize as in the Unity documentation - think "Eiffel Tower" vs. "Eiffel tower")</li>
 <li>page 58: "a script calls a Log.LogError" should read "a script calls Debug.LogError"</li>
 </ul><h3>
-<a name="chapter-3" class="anchor" href="#chapter-3"><span class="octicon octicon-link"></span></a>Chapter 3</h3>
+<a name="chapter-3---making-a-scene" class="anchor" href="#chapter-3---making-a-scene"><span class="octicon octicon-link"></span></a>Chapter 3 - Making a Scene</h3>
+
+<p>Create a new Unity scene, add primitive models, textures, lighting, and camera movement. Import assets from Standard Assets, the Unity Asset Store, and the file system.</p>
 
 <ul>
 <li>page 63: "Assets that were installed with Unity in the previous chapter" should read "Assets that were installed with Unity in Chapter 1</li>
 <li>page 67: "Script Reference" should read "Scripting Reference"</li>
 </ul><h3>
-<a name="chapter-4" class="anchor" href="#chapter-4"><span class="octicon octicon-link"></span></a>Chapter 4</h3>
+<a name="chapter-4---making-it-move-scripting-the-cube" class="anchor" href="#chapter-4---making-it-move-scripting-the-cube"><span class="octicon octicon-link"></span></a>Chapter 4 - Making it Move: Scripting the Cube</h3>
+
+<p>Create a script (JavaScript), spin the cube, make prefabs, edit and debug scripts with MonoDevelop.</p>
 
 <h3>
-<a name="chapter-5" class="anchor" href="#chapter-5"><span class="octicon octicon-link"></span></a>Chapter 5</h3>
+<a name="chapter-5---lets-dance-animation-and-sound" class="anchor" href="#chapter-5---lets-dance-animation-and-sound"><span class="octicon octicon-link"></span></a>Chapter 5 - Let's Dance! Animation and Sound</h3>
+
+<p>Import a dancing skeleton and music, select and loop the animation and music, add shadows and particle effects.</p>
 
 <h3>
-<a name="chapter-6" class="anchor" href="#chapter-6"><span class="octicon octicon-link"></span></a>Chapter 6</h3>
+<a name="chapter-6---lets-roll-physics" class="anchor" href="#chapter-6---lets-roll-physics"><span class="octicon octicon-link"></span></a>Chapter 6 - Let's Roll! Physics</h3>
+
+<p>Create the beginnings of a bowling game. Make a ball and floor, add colliders and rigidbodies for collision detection and collision reaction, respectively.</p>
 
 <h3>
-<a name="chapter-7" class="anchor" href="#chapter-7"><span class="octicon octicon-link"></span></a>Chapter 7</h3>
+<a name="chapter-7---lets-bowl-advanced-physics" class="anchor" href="#chapter-7---lets-bowl-advanced-physics"><span class="octicon octicon-link"></span></a>Chapter 7 - Let's Bowl! Advanced Physics</h3>
+
+<p>Add bowling pins using primitive models and models from the Asset Store. Construct compound colliders. Add sound effects triggered by collision callbacks.</p>
 
 <p>Explore Further</p>
 
@@ -308,7 +227,9 @@
 </ul>
 </li>
 </ul><h3>
-<a name="chapter-8" class="anchor" href="#chapter-8"><span class="octicon octicon-link"></span></a>Chapter 8</h3>
+<a name="chapter-8---lets-play-scripting-the-game" class="anchor" href="#chapter-8---lets-play-scripting-the-game"><span class="octicon octicon-link"></span></a>Chapter 8 - Let's Play! Scripting the Game</h3>
+
+<p>Implement the bowling game rules with a finite state machine using coroutines.</p>
 
 <ul>
 <li>page 281: The link to the Blue Mars wiki, "<a href="http://create.bluemars.com">http://create.bluemars.com</a>", should read "<a href="http://create.bluemars.com/wiki">http://create.bluemars.com/wiki</a>"</li>
@@ -326,21 +247,31 @@
 </ul>
 </li>
 </ul><h3>
-<a name="chapter-9" class="anchor" href="#chapter-9"><span class="octicon octicon-link"></span></a>Chapter 9</h3>
+<a name="chapter-9---the-game-gui" class="anchor" href="#chapter-9---the-game-gui"><span class="octicon octicon-link"></span></a>Chapter 9 - The Game GUI</h3>
+
+<p>Implement a scoreboard and pause menu with UnityGUI.</p>
 
 <h3>
-<a name="chapter-10" class="anchor" href="#chapter-10"><span class="octicon octicon-link"></span></a>Chapter 10</h3>
+<a name="chapter-10---using-unity-ios" class="anchor" href="#chapter-10---using-unity-ios"><span class="octicon octicon-link"></span></a>Chapter 10 - Using Unity iOS</h3>
+
+<p>Return to Angry Bots to get familiar with Unity iOS. Switch the build target to iOS, customize Player Settings, test in the Editor with Unity Remote, build to Xcode and test in the iOS Simulator.</p>
 
 <h3>
-<a name="chapter-11" class="anchor" href="#chapter-11"><span class="octicon octicon-link"></span></a>Chapter 11</h3>
+<a name="chapter-11---building-for-real" class="anchor" href="#chapter-11---building-for-real"><span class="octicon octicon-link"></span></a>Chapter 11 - Building For Real</h3>
+
+<p>Set up devices, provisioning profiles and app descriptions on the Provisioning Portal and iTunes Connect. Build Angry Bots for test devices and for submission to the App Store.</p>
 
 <h3>
-<a name="chapter-12" class="anchor" href="#chapter-12"><span class="octicon octicon-link"></span></a>Chapter 12</h3>
+<a name="chapter-12---presentation-icons-and-splash-screens" class="anchor" href="#chapter-12---presentation-icons-and-splash-screens"><span class="octicon octicon-link"></span></a>Chapter 12 - Presentation: Icons and Splash Screens</h3>
+
+<p>Resume work on the bowling game. Automatically scale the GUI for different screen sizes. Incorporate initial and secondary splash screens.</p>
 
 <p>It should be noted the Fugu Games splash screen and the Fugu icon (also used as a texture in Chapter 3) are based on the Fugu Games logo designed by <a href="http://shanenakamuradesigns.com/">Shane Nakamura</a>.</p>
 
 <h3>
-<a name="chapter-13" class="anchor" href="#chapter-13"><span class="octicon octicon-link"></span></a>Chapter 13</h3>
+<a name="chapter-13---device-input" class="anchor" href="#chapter-13---device-input"><span class="octicon octicon-link"></span></a>Chapter 13 - Device Input</h3>
+
+<p>Implement touchscreen input for the bowling game, detect shakes with the accelerometer, display video textures with the webcam.</p>
 
 <p>Explore Further</p>
 
@@ -354,7 +285,9 @@
 </ul>
 </li>
 </ul><h3>
-<a name="chapter-14" class="anchor" href="#chapter-14"><span class="octicon octicon-link"></span></a>Chapter 14</h3>
+<a name="chapter-14---game-center-leaderboards-and-achievements" class="anchor" href="#chapter-14---game-center-leaderboards-and-achievements"><span class="octicon octicon-link"></span></a>Chapter 14 - Game Center: Leaderboards and Achievements</h3>
+
+<p>Set up Game Center leaderboards and achievements in iTunes Connect. Submit high scores and achievements and activate iOS5-style achievement banners with scripts.</p>
 
 <p>Explore Further</p>
 
@@ -368,7 +301,9 @@
 </ul>
 </li>
 </ul><h3>
-<a name="chapter-15" class="anchor" href="#chapter-15"><span class="octicon octicon-link"></span></a>Chapter 15</h3>
+<a name="chapter-15---iad-banner-and-interstitial-ads" class="anchor" href="#chapter-15---iad-banner-and-interstitial-ads"><span class="octicon octicon-link"></span></a>Chapter 15 - iAd: Banner and Interstitial Ads</h3>
+
+<p>Set up iAd in iTunes Connect. Add a banner ad and intersitiai ad to the bowling game with scripts.</p>
 
 <ul>
 <li>page 443: In "The while loop calls yield", "yield" should be formatted as inline code</li>
@@ -397,7 +332,9 @@
 </ul>
 </li>
 </ul><h3>
-<a name="chapter-16" class="anchor" href="#chapter-16"><span class="octicon octicon-link"></span></a>Chapter 16</h3>
+<a name="chapter-16---optimization" class="anchor" href="#chapter-16---optimization"><span class="octicon octicon-link"></span></a>Chapter 16 - Optimization</h3>
+
+<p>Optimize for quality, space and speed (just not all at once). Use the Editor and built-in profilers.</p>
 
 <ul>
 <li>page 474: "Inspector view" should read "Inspector View"</li>
@@ -449,7 +386,9 @@
 </ul>
 </li>
 </ul><h3>
-<a name="chapter-17" class="anchor" href="#chapter-17"><span class="octicon octicon-link"></span></a>Chapter 17</h3>
+<a name="chapter-17---where-to-go-from-here" class="anchor" href="#chapter-17---where-to-go-from-here"><span class="octicon octicon-link"></span></a>Chapter 17 - Where to Go from Here?</h3>
+
+<p>Miscellaneous topics: C# and Editor scripts, plugins, customizing script execution order, promoting your apps, more monetization.</p>
 
 <ul>
 <li>page 512: "Storekit" should read "StoreKit" as in the Prime31 documentation (or "Store Kit" as in the Apple documentation)</li>
