@@ -36,7 +36,7 @@ function Start () {
 }
 #endif
 
-#if UNITY_ANDROID
+#if UNITY_ANDROID && !NOOK
 function Start() {
 	AdMobAndroid.init(AdMobID);
 	AdMobAndroid.createBanner( AdMobAndroidAd.smartBanner,

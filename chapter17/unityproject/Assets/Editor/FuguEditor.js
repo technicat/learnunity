@@ -18,7 +18,7 @@ static function DeactivateRecursively() {
 
 static function SetActiveRecursively(obj:GameObject,val:boolean) {
 		obj.SetActive(val);
-		for (var i:int=0; i<obj.transform.GetChildCount(); ++i) {
+		for (var i:int=0; i<obj.transform.childCount; ++i) {
 				SetActiveRecursively(obj.transform.GetChild(i).gameObject,val);
 		}
 			

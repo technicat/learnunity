@@ -60,7 +60,13 @@ function Update() {
 	{
 		switch (currentPage) {
 			case Page.None: PauseGame(); break; // if the pause menu is not displayed, then pause
-			case Page.Main: UnPauseGame(); break; // if the main pause menu is displaying, then unpause
+			case Page.Main:
+#if NOOK
+			Application.Quit();
+#else
+			UnPauseGame();
+#endif
+		 	break; // if the main pause menu is displaying, then unpause
 			default: currentPage = Page.Main; // any subpage goes back to main page
 		}
 	}
