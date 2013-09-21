@@ -306,7 +306,12 @@ and <a href="https://www.assetstore.unity3d.com/#/content/840">Barrel</a> from <
 
 <p>Set up devices, provisioning profiles and app descriptions on the Provisioning Portal and iTunes Connect. Build Angry Bots for test devices and for submission to the App Store.</p>
 
-<h3>
+<p>Problems introduced with Xcode 5 (hopefully temporary):</p>
+
+<ul>
+<li><p>Build and Run in the Unity Editor fails to start Xcode 5. Workaround: double-click the xcodeproj file to bring up Xcode 5 manually, then click the Run/Play button.</p></li>
+<li><p>In Xcode 5, Archive may complain there is no matching provisioning profile for the test device. Workaround: detach the test device before invoking Archive.</p></li>
+</ul><h3>
 <a name="chapter-12---presentation-icons-and-splash-screens" class="anchor" href="#chapter-12---presentation-icons-and-splash-screens"><span class="octicon octicon-link"></span></a>Chapter 12 - Presentation: Icons and Splash Screens</h3>
 
 <p>Resume work on the bowling game. Automatically scale the GUI for different screen sizes. Incorporate initial and secondary splash screens.</p>
