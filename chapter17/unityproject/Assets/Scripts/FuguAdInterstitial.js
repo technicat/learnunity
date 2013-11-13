@@ -1,39 +1,23 @@
 /*
 Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
-http://learnunity4.com/
+http://github.com/technicat/LearnUnity
 */
 
-#pragma strict
+// this is updated with the much simpler API in Unity 4.3
 
-var waitTime:float = 2.0;
+#pragma strict
 
 #if UNITY_IPHONE
 private var ad:ADInterstitialAd = null;
 
 function Start() {
-	var gen:iPhoneGeneration = iPhone.generation;
-	if (gen == iPhoneGeneration.iPad1Gen || 
-		gen == iPhoneGeneration.iPad2Gen || 
-		gen == iPhoneGeneration.iPad3Gen ||
-		gen == iPhoneGeneration.iPad4Gen ||
-		gen == iPhoneGeneration.iPadMini1Gen ||
-		gen == iPhoneGeneration.iPadUnknown) {
+	if (ADInterstitialAd.isAvailable) {
 		ad = new ADInterstitialAd();
-		var startTime = Time.time;
-		while (!ad.loaded && ad.error == null && Time.time-startTime<waitTime) {
-			yield;
-		}
-		if (ad.loaded && ad.error == null) {
-			Debug.Log("iAd page shown");
-			ad.Present();
-		} else {
-			if (ad.error != null) {
-				Debug.Log("iAd page error: "+ad.error.description);
-			} else {
-				Debug.Log("iAd page timed out");
-			}
-			ad = null;
-		}
+		ADInterstitialAd.onInterstitialWasLoaded  += OnFullscreenLoaded;
 	}
+}
+
+function OnFullscreenLoaded() {
+	ad.Show();
 }
 #endif
