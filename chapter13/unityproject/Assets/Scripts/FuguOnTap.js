@@ -10,7 +10,7 @@ function Update () {
 			if (Input.GetTouch(i).phase == TouchPhase.Began) {
 				var ray:Ray = camera.ScreenPointToRay (Input.GetTouch(i).position);
 				var hit:RaycastHit;
-				if (Physics.Raycast (ray,hit,camera.far,camera.cullingMask)) {
+				if (Physics.Raycast (ray,hit,camera.farClipPlane,camera.cullingMask)) {
 					hit.collider.SendMessage("OnTap",SendMessageOptions.DontRequireReceiver);
 				}
 			}
