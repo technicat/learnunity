@@ -4,29 +4,40 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Learn Unity by technicat</title>
-
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/technicat/LearnUnity">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/technicat/LearnUnity/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/technicat/LearnUnity/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
     <div class="wrapper">
-      <header>
-        <h1>Learn Unity</h1>
-        <p>Unity project examples for the book Learn Unity 4 for iOS Game Development</p>
-        <p class="view"><a href="https://github.com/technicat/LearnUnity">View the Project on GitHub <small>technicat/LearnUnity</small></a></p>
-        <ul>
-          <li><a href="https://github.com/technicat/LearnUnity/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/technicat/LearnUnity/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/technicat/LearnUnity">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
+
       <section>
+        <div id="title">
+          <h1>Learn Unity</h1>
+          <p>Unity project examples for the book Learn Unity 4 for iOS Game Development</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/technicat">technicat</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
         <p><a href="http://www.amazon.com/Learn-Unity-iOS-Game-Development/dp/1430248750"><img src="http://www.fugutalk.com/wp-content/uploads/2013/06/photo.jpg" width="300"></a>
 <a href="https://itunes.apple.com/app/learn-unity/id634845779"><img src="http://www.fugutalk.com/wp-content/uploads/2013/04/IMG_0618.png" width="300"></a></p>
 
@@ -308,11 +319,12 @@ and <a href="https://www.assetstore.unity3d.com/#/content/840">Barrel</a> from <
 
 <p>Set up devices, provisioning profiles and app descriptions on the Provisioning Portal and iTunes Connect. Build Angry Bots for test devices and for submission to the App Store.</p>
 
+<p>It is no longer necessary (or possible) to install development provisioning profiles on test devices via the Xcode Organizer. The profile is autmatically installed if necessary when running/installing the app.</p>
+
 <p>Problems introduced with Xcode 5 (hopefully temporary):</p>
 
 <ul>
-<li><p>Build and Run in the Unity Editor fails to start Xcode 5. Workaround: double-click the xcodeproj file to bring up Xcode 5 manually, then click the Run/Play button.</p></li>
-<li><p>In Xcode 5, Archive may complain there is no matching provisioning profile for the test device. Workaround: detach the test device before invoking Archive.</p></li>
+<li>In Xcode 5, Archive may complain there is no matching provisioning profile for the test device. Workaround: detach the test device before invoking Archive.</li>
 </ul><h3>
 <a name="chapter-12---presentation-icons-and-splash-screens" class="anchor" href="#chapter-12---presentation-icons-and-splash-screens"><span class="octicon octicon-link"></span></a>Chapter 12 - Presentation: Icons and Splash Screens</h3>
 
@@ -565,11 +577,8 @@ and <a href="https://www.assetstore.unity3d.com/#/content/840">Barrel</a> from <
 
 <p><a href="http://www.amazon.ca/product-reviews/B00ACC6BJK/">I read it cover to cover</a></p>
       </section>
+
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/technicat">technicat</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
