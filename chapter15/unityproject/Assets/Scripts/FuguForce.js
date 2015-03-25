@@ -50,8 +50,8 @@ function CalcForce() {
 
 
 function FixedUpdate() {
-	if (isRolling && rigidbody.velocity.sqrMagnitude<maxVelocity) {
-		rigidbody.AddForce(forcex,0,forcey);
+	if (isRolling && GetComponent.<Rigidbody>().velocity.sqrMagnitude<maxVelocity) {
+		GetComponent.<Rigidbody>().AddForce(forcex,0,forcey);
 	}
 }
 

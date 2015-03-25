@@ -17,7 +17,7 @@ private var body:Rigidbody = null;
 function Awake() {
 	// cache the Transform reference
 	trans = transform;
-	body = rigidbody;
+	body = GetComponent.<Rigidbody>();
 	// save the initial position and rotation of this GameObject
 	startPos = trans.localPosition;
 	startRot = trans.localEulerAngles;

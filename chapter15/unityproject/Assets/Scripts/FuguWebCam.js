@@ -2,6 +2,6 @@
 
 function Start () {
 var webcamTexture:WebCamTexture = WebCamTexture();
-renderer.material.mainTexture = webcamTexture;
+GetComponent.<Renderer>().material.mainTexture = webcamTexture;
 webcamTexture.Play();
 }

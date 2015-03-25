@@ -25,8 +25,8 @@ function Update() {
 }
 
 function FixedUpdate() {
-	if (isRolling && rigidbody.velocity.sqrMagnitude<maxVelocitySquared) {
-		rigidbody.AddForce(forcex,0,forcey);
+	if (isRolling && GetComponent.<Rigidbody>().velocity.sqrMagnitude<maxVelocitySquared) {
+		GetComponent.<Rigidbody>().AddForce(forcex,0,forcey);
 	}
 }
 

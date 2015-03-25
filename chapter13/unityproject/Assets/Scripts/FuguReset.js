@@ -21,8 +21,8 @@ function ResetPosition() {
 	transform.localPosition = startPos;
 	transform.localEulerAngles = startRot;
 	// make sure we stop all physics movement
-	if (rigidbody != null) {
-		rigidbody.velocity = Vector3.zero;
-		rigidbody.angularVelocity = Vector3.zero;
+	if (GetComponent.<Rigidbody>() != null) {
+		GetComponent.<Rigidbody>().velocity = Vector3.zero;
+		GetComponent.<Rigidbody>().angularVelocity = Vector3.zero;
 	}
 }

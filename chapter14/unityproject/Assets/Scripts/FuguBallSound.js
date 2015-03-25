@@ -17,13 +17,13 @@ function Awake() {
 
 function OnCollisionStay(collider:Collision) {
 	if (collider.gameObject.tag == floorTag) {
-		if (rigidbody.velocity.sqrMagnitude>sqrMinSpeed) {
-			if (!audio.isPlaying) {
-				audio.Play();
+		if (GetComponent.<Rigidbody>().velocity.sqrMagnitude>sqrMinSpeed) {
+			if (!GetComponent.<AudioSource>().isPlaying) {
+				GetComponent.<AudioSource>().Play();
 			}
 		} else {
-			if (audio.isPlaying) {
-				audio.Stop();
+			if (GetComponent.<AudioSource>().isPlaying) {
+				GetComponent.<AudioSource>().Stop();
 			}
 		}	
 	}
@@ -31,8 +31,8 @@ function OnCollisionStay(collider:Collision) {
 
 function OnCollisionExit(collider:Collision) {
 	if (collider.gameObject.tag == floorTag) {
-		if (audio.isPlaying) {
-			audio.Stop();
+		if (GetComponent.<AudioSource>().isPlaying) {
+			GetComponent.<AudioSource>().Stop();
 		}
 	}
 }

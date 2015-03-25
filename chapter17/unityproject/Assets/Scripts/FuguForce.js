@@ -25,7 +25,7 @@ private var body:Rigidbody = null;
 private var floorTag:String = "Floor";
 
 function Awake() {
-	body = rigidbody;
+	body = GetComponent.<Rigidbody>();
 }
 
 function Update() {

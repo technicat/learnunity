@@ -17,8 +17,8 @@ private var audiosrc:AudioSource; // cached AudioSource Component
 private var floorTag = "Floor";
 
 function Awake() {
-	body = rigidbody;
-	audiosrc = audio;
+	body = GetComponent.<Rigidbody>();
+	audiosrc = GetComponent.<AudioSource>();
 	sqrMinSpeed = minSpeed*minSpeed;
 }
 

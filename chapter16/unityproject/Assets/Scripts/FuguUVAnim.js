@@ -18,9 +18,9 @@ private var material:Material;
 function Start() {
 	offset=new Vector2(0,0);
 	if (shared) {
-		material = renderer.sharedMaterials[materialIndex];
+		material = GetComponent.<Renderer>().sharedMaterials[materialIndex];
 	} else {
-		material = renderer.materials[materialIndex];
+		material = GetComponent.<Renderer>().materials[materialIndex];
 	}
 }
 
