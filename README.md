@@ -21,7 +21,7 @@ https://itunes.apple.com/us/book/learn-unity-4-for-ios-game/id670921450?mt=11) (
 * [Powell's](http://www.powells.com/biblio/61-9781430248750-0)
 * [Safari Books](http://my.safaribooksonline.com/book/programming/game-programming/9781430248750) (online subscription)
 * [Springer Link](http://link.springer.com/book/10.1007/978-1-4302-4876-7)
-* [WH Smith] (http://www.whsmith.co.uk/products/learn-unity-4-for-ios-game-development/product/9781430248750)
+* [WH Smith](http://www.whsmith.co.uk/products/learn-unity-4-for-ios-game-development/product/9781430248750)
 
 
 The ebook versions provide samples of the first chapter, Safari Books provides shows a portion of each chapter, and Chapter 10 (Using Unity iOS) is viewable free on my [technicat site](http://drupal.technicat.com/learnunity4.html).
