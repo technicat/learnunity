@@ -47,10 +47,11 @@ function OnGUI() {
 				}
 			}
 		}
-		GUI.Label(Rect(f*30+5,5,50,20),score,style);
+		var y = 25;
+		GUI.Label(Rect(f*30+5,y,50,20),score,style);
 		var total:int=FuguBowl.player.GetScore(f);
 		if (total != -1) {
-			GUI.Label(Rect(f*30+5,20,50,20)," "+total,style);
+			GUI.Label(Rect(f*30+5,y+15,50,20)," "+total,style);
 		}
 	}
 }

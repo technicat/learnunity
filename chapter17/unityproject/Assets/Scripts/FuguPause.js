@@ -9,7 +9,7 @@ http://learnunity4.com/
 
 var skin:GUISkin;
 var startPaused:boolean = true;
-var menutop:int=25;
+var menutop:int=50;
 var hudColor:Color = Color.white;
 
 // fill in the credit info for your game

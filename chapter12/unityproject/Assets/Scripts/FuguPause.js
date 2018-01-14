@@ -9,7 +9,7 @@ http://learnunity4.com/
 
 var skin:GUISkin;
 var startPaused:boolean = true;
-var menutop:int=25;
+var menutop:int=50;
 var hudColor:Color = Color.white;
 
 // fill in the credit info for your game
@@ -18,12 +18,15 @@ var credits:String[]=[
 	"Copyright (c) 2012 Technicat, LLC. All Rights Reserved.",
 	"More information at http://fugugames.com/"] ;
 	
+var shakeThreshold:float = 5.0;
+	
 var baseScreenWidth:float = 320.0; // target screen width on iOS
 
 enum Page {
 	None,Main,Options,Credits,Help
 }
 
+private var startTime = 0.1;
 private var savedTimeScale:float;
 
 private var currentPage:Page;
@@ -33,7 +36,7 @@ private var screenWidth:float;
 private var screenHeight:float;
 
 function Awake() {
-#if UNITY_IPHONE
+#if UNITY_IPHONE || UNITY_ANDROID
 	screenWidth = Screen.width;
 	screenHeight = Screen.height;
 #else
@@ -49,10 +52,21 @@ function Start() {
 }
 
 function Update() {
-	if (Input.GetKeyDown(KeyCode.Escape)) {
+#if !UNITY_IPHONE
+	if (Input.GetKeyDown(KeyCode.Escape))
+#else
+	if (Input.acceleration.sqrMagnitude>shakeThreshold)
+#endif
+	{
 		switch (currentPage) {
 			case Page.None: PauseGame(); break; // if the pause menu is not displayed, then pause
-			case Page.Main: UnPauseGame(); break; // if the main pause menu is displaying, then unpause
+			case Page.Main:
+#if NOOK
+			Application.Quit();
+#else
+			UnPauseGame();
+#endif
+		 	break; // if the main pause menu is displaying, then unpause
 			default: currentPage = Page.Main; // any subpage goes back to main page
 		}
 	}
@@ -60,7 +74,7 @@ function Update() {
 
 function OnGUI () {
 	if (IsGamePaused()) {
-#if UNITY_IPHONE
+#if UNITY_IPHONE || UNITY_ANDROID
 		var guiScale:float = screenWidth/baseScreenWidth;
 		GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
 #endif
@@ -138,7 +152,7 @@ function ShowAudio() {
 }
 
 function BeginPage(width:int,height:int) {
-#if !UNITY_IPHONE
+#if !UNITY_IPHONE && !UNITY_ANDROID
 	GUILayout.BeginArea(Rect((Screen.width-width)/2,menutop,width,height));
 #else
 	GUILayout.BeginArea(Rect((baseScreenWidth-width)/2,menutop,width,height));
@@ -165,7 +179,15 @@ function ShowPauseMenu() {
 	if (GUILayout.Button ("Credits")) {
 		currentPage = Page.Credits;
 	}
-#if !UNITY_IPHONE && !UNITY_WEBPLAYER
+#if UNITY_IPHONE
+	if (GUILayout.Button ("High Scores")) {
+		Social.ShowLeaderboardUI();
+	}
+	if (GUILayout.Button ("Achievements")) {
+		Social.ShowAchievementsUI();
+	}
+#endif
+#if !UNITY_IPHONE && !UNITY_WEBPLAYER && !UNITY_EDITOR
 	if (GUILayout.Button ("Quit")) {
 		Application.Quit();
 	}

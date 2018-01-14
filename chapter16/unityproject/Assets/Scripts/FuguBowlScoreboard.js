@@ -8,12 +8,9 @@ http://learnunity4.com/
 var style:GUIStyle; // customize the appearance
 var baseScreenWidth:float = 320.0; // for iOS, the screen width we think we're rendering on
 
-function Awake() {
-	useGUILayout = false;
-}
-
 function OnGUI() {
-#if UNITY_IPHONE
+	useGUILayout = false;
+#if UNITY_IPHONE || UNITY_ANDROID
 	var guiScale:float = Screen.width/baseScreenWidth;
 	GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
 #endif
@@ -50,10 +47,11 @@ function OnGUI() {
 				}
 			}
 		}
-		GUI.Label(Rect(f*30+5,5,50,20),score,style);
+		var y = 25;
+		GUI.Label(Rect(f*30+5,y,50,20),score,style);
 		var total:int=FuguBowl.player.GetScore(f);
 		if (total != -1) {
-			GUI.Label(Rect(f*30+5,20,50,20)," "+total,style);
+			GUI.Label(Rect(f*30+5,y+15,50,20)," "+total,style);
 		}
 	}
 }
