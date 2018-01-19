@@ -1,10 +1,24 @@
+# git ignore for unity repo
+
+# those hidden OSX files
 .DS_Store
+
+# assume Unity project is in text format
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
+
+# debug files
 *.csproj
 *.pidb
 *.sln
 *.unityproj
+
+# user preferences
 *.userprefs
+
+# android debugging
+*symbols.zip
+
+# subversion
 .svn
