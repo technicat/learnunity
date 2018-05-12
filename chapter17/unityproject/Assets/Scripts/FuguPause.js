@@ -127,7 +127,6 @@ function ShowSystem() {
 	SystemInfo.graphicsDeviceVendor);
 	GUILayout.Label("Shadows: "+ Available(SystemInfo.supportsShadows));
 	GUILayout.Label("Image Effects: "+Available(SystemInfo.supportsImageEffects));
-	GUILayout.Label("Render Textures: "+Available(SystemInfo.supportsRenderTextures));
 }
 
 function ShowGraphics() {
