@@ -22,6 +22,7 @@ public class Splash : MonoBehaviour {
 	IEnumerator WaitAndLoad() {
 		yield return new WaitForSeconds(waitTime);
 		Application.LoadLevel(level);
+		UnityEngine.SceneManagement.SceneManager.LoadScene(level);
 	}
 	
 
