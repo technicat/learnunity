@@ -10,5 +10,5 @@ var level:String; // scene name to load
 
 function Start() {
 	yield WaitForSeconds(waitTime);
-	Application.LoadLevel(level);
+	SceneManagement.SceneManager.LoadScene(level);
 }
