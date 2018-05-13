@@ -1,65 +1,35 @@
-/*
-Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
-http://github.com/technicat/LearnUnity
-*/
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+namespace Fugu {
+public class BowlPlayer {
 
-// bowling score for a player
-
-#pragma strict
-
-// the score for a single bowling frame
-// -1 means that ball has not been rolled
-class FuguBowlScore {
-	var ball1:int; // pins down for ball 1
-	var ball2:int; // pins down for ball 2
-	var ball3:int; // pins down for ball 3
-	var total:int; // total score for this frame (may include future rolls)
 	
-	function Clear() {
-		ball1 = -1;
-		ball2 = -1;
-		ball3 = -1;
-		total = -1;
-	}
-	
-	function IsSpare():boolean {
-		// doesn't handle spare on ball3
-		return !IsStrike() &&
-			(ball1 + ball2 == 10);
-	}
-
-	function IsStrike():boolean {
-		return ball1 == 10;
-	}
-}
-
-// minimal player class, just has score information
-class FuguBowlPlayer {
-	var scores:FuguBowlScore[]; // all 10 frames of the game
+	public BowlScore[] scores; // all 10 frames of the game
 	
 	// constructor
-	function FuguBowlPlayer() {
-		scores = new FuguBowlScore[10];
-		for (var i:int=0; i<scores.length; ++i) {
-			scores[i] = new FuguBowlScore();
+	 public BowlPlayer() {
+		scores = new BowlScore[10];
+		for (int i=0; i<scores.Length; ++i) {
+			scores[i] = new BowlScore();
 		}
 		ClearScore();
 	}
 	
 	// reset the score for all frames
-	function ClearScore() {
-		for (var score:FuguBowlScore in scores) {
+	public void ClearScore() {
+		foreach (BowlScore score in scores) {
 			score.Clear();
 		}
 	}
 	
 	// return total score at frame, -1 if score is not finalized
-	function GetScore(frame:int):int {
+	public int GetScore(int frame) {
 		if (frame==0 || scores[frame].total==-1) {
 			return scores[frame].total;
 		} else {
-			var prev:int = GetScore(frame-1);
+			int prev = GetScore(frame-1);
 			if (prev==-1) {
 				return -1;
 			} else {
@@ -68,16 +38,16 @@ class FuguBowlPlayer {
 		}
 	}
 	
-	function IsSpare(frame:int):boolean {
+	public bool IsSpare(int frame) {
 		return scores[frame].IsSpare();
 	}
 
-	function IsStrike(frame:int):boolean {
+	public bool IsStrike(int frame) {
 		return scores[frame].IsStrike();
 	}
 	
 	// set the ball 1 score of the current frame
-	function SetBall1Score(frame:int,pinsDown:int) {
+	public void SetBall1Score(int frame,int pinsDown) {
 		scores[frame].ball1=pinsDown;
 		// if previous frame was a spare, set its score
 		if (frame>0 && IsSpare(frame-1)) {
@@ -92,8 +62,8 @@ class FuguBowlPlayer {
 	
 
 	// set the ball 2 score of the current frame
-	function SetBall2Score(frame:int,pinsDown:int) {
-		var framescore:FuguBowlScore = scores[frame];
+	public void SetBall2Score(int frame,int pinsDown) {
+		BowlScore framescore = scores[frame];
 		if (IsStrike(frame)) { // we must be in the final frame
 			framescore.ball2=pinsDown;
 		} else {
@@ -111,8 +81,8 @@ class FuguBowlPlayer {
 	
 	
 // set the ball 3 score of the current frame (final frame)
-	function SetBall3Score(frame:int,pinsDown:int) {
-		var framescore:FuguBowlScore = scores[frame];
+	public void SetBall3Score(int frame,int pinsDown) {
+		BowlScore framescore = scores[frame];
 		if (IsStrike(frame) && framescore.ball2 <10) {
 			framescore.ball3 = pinsDown - framescore.ball2;
 		} else {
@@ -123,16 +93,16 @@ class FuguBowlPlayer {
 
 
 	// calculate and set the spare score for the given frame
-	function SetSpareScore(frame:int) {
-		var framescore:FuguBowlScore = scores[frame];
+	public void SetSpareScore(int frame) {
+		BowlScore framescore = scores[frame];
 		// the score is the score of both rolls in this frame and teh first roll of the next
 		framescore.total = framescore.ball1+framescore.ball2+scores[frame+1].ball1;
 	}
 	
 	// calculate and set the strike score for the given frame
 	// not called for the final frame
-	function SetStrikeScore(frame:int) {
-		var framescore:FuguBowlScore = scores[frame];
+	public void SetStrikeScore(int frame) {
+		BowlScore framescore = scores[frame];
 		framescore.total = framescore.ball1;
 		// always add the score from first roll of the next frame
 		framescore.total+=scores[frame+1].ball1;
@@ -144,5 +114,5 @@ class FuguBowlPlayer {
 			framescore.total+=scores[frame+1].ball2;
 		}
 	}
-
+}
 }

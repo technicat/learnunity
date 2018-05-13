@@ -1,6 +1,6 @@
 /*
 Copyright (c) 2013 Technicat, LLC. All Rights Reserved. MIT License.
-http://learnunity4.com/
+http://github.com/technicat/LearnUnity
 */
 
 // bowling ball rolling sound
