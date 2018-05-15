@@ -16,7 +16,7 @@ public class Spinner : MonoBehaviour {
 		
 	IEnumerator StartActivityIndicator () {
 #if UNITY_IPHONE
-		Handheld.SetActivityIndicatorStyle(iOSActivityIndicatorStyle.Gray);
+		Handheld.SetActivityIndicatorStyle(UnityEngine.iOS.ActivityIndicatorStyle.Gray);
 #endif
 #if UNITY_ANDROID
 		Handheld.SetActivityIndicatorStyle(AndroidActivityIndicatorStyle.InversedLarge);

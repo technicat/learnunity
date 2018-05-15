@@ -41,9 +41,9 @@ void CalcForce() {
 #if UNITY_IPHONE || UNITY_ANDROID
 	if (Input.touchCount > 0) {
 		// Get movement of the finger since last frame
-		var touch:Touch = Input.GetTouch(0);
+		Touch touch = Input.GetTouch(0);
 		if (touch.phase == TouchPhase.Moved) {
-			var touchPositionDelta:Vector2 = touch.deltaPosition;
+			Vector2 touchPositionDelta = touch.deltaPosition;
 			forcey = swipepowery*touchPositionDelta.y/deltatime;
 			forcex = swipepowerx*touchPositionDelta.x/deltatime;
 		}

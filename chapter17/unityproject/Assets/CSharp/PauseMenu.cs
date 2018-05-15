@@ -72,8 +72,8 @@ void Update() {
 void OnGUI () {
 	if (IsGamePaused()) {
 #if UNITY_IPHONE || UNITY_ANDROID
-		var guiScale:float = screenWidth/baseScreenWidth;
-		GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, Vector3(guiScale, guiScale, 1));
+		float guiScale = screenWidth/baseScreenWidth;
+		GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, new Vector3(guiScale, guiScale, 1));
 #endif
 		if (skin != null) {
 			GUI.skin = skin;
