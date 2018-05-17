@@ -15,13 +15,15 @@ public class Spinner : MonoBehaviour {
 	}
 		
 	IEnumerator StartActivityIndicator () {
-#if UNITY_IPHONE
+#if UNITY_IOS
 		Handheld.SetActivityIndicatorStyle(UnityEngine.iOS.ActivityIndicatorStyle.Gray);
 #endif
 #if UNITY_ANDROID
 		Handheld.SetActivityIndicatorStyle(AndroidActivityIndicatorStyle.InversedLarge);
 #endif
+#if UNITY_IOS || UNITY_ANDROID
 		Handheld.StartActivityIndicator();
+#endif
 		yield return null;
 }
 
