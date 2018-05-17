@@ -20,7 +20,9 @@ public class Splash : MonoBehaviour {
 		#if UNITY_ANDROID
 		Handheld.SetActivityIndicatorStyle(AndroidActivityIndicatorStyle.InversedLarge);
 		#endif
+		#if UNITY_IOS || UNITY_ANDROID
 		Handheld.StartActivityIndicator();
+		#endif
 		StartCoroutine (WaitAndLoad ());
 	}
 		
