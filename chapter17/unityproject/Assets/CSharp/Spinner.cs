@@ -28,7 +28,9 @@ public class Spinner : MonoBehaviour {
 }
 
 	void OnLevelWasLoaded() {
+#if UNITY_IOS || UNITY_ANDROID
 		Handheld.StopActivityIndicator();
+#endif
 		GameObject.Destroy(gameObject);
 }
 	
