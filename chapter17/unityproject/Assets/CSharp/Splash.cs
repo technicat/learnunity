@@ -14,7 +14,12 @@ public class Splash : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		UnityEngine.Object.DontDestroyOnLoad(gameObject); // retain this object through a level load
+		#if UNITY_IOS
 		Handheld.SetActivityIndicatorStyle(UnityEngine.iOS.ActivityIndicatorStyle.Gray);
+		#endif
+		#if UNITY_ANDROID
+		Handheld.SetActivityIndicatorStyle(AndroidActivityIndicatorStyle.InversedLarge);
+		#endif
 		Handheld.StartActivityIndicator();
 		StartCoroutine (WaitAndLoad ());
 	}

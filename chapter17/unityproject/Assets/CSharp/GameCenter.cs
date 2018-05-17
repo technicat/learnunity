@@ -5,7 +5,9 @@ http://learnunity4.com/
 using UnityEngine;
 using System.Collections;
 
+#if UNITY_IOS
 using UnityEngine.SocialPlatforms.GameCenter;
+#endif
 
 namespace Fugu {
 	
@@ -29,7 +31,7 @@ sealed public class GameCenter : MonoBehaviour {
 	}
 		
 	static public void Achievement(string name,double score) {
-#if UNITY_IPHONE
+#if UNITY_IOS
 	if (Social.localUser.authenticated) {
 		Social.ReportProgress(name,score, (bool success) => {
 			if (success) {
@@ -43,7 +45,7 @@ sealed public class GameCenter : MonoBehaviour {
 }
 
 	static public void Score(string name,long score) {
-#if UNITY_IPHONE
+#if UNITY_IOS
 	if (Social.localUser.authenticated) {
 		  Social.ReportScore (score, name, (bool success) => {
 			if (success) {
