@@ -7,7 +7,7 @@ http://learnunity4.com/
 #if UNITY_IPHONE
 function Start() {
 	DontDestroyOnLoad(gameObject);
-	Handheld.SetActivityIndicatorStyle(iOSActivityIndicatorStyle.WhiteLarge);
+	Handheld.SetActivityIndicatorStyle(UnityEngine.iOS.ActivityIndicatorStyle.WhiteLarge);
 	Handheld.StartActivityIndicator();
 }
 
