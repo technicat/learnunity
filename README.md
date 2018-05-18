@@ -1,9 +1,6 @@
-<a href="http://www.amazon.com/Learn-Unity-iOS-Game-Development/dp/1430248750"><img  src="http://itshardtofondlepenguins.com/wp-content/uploads/2013/06/photo.jpg" width="300"/></a>
-<a href="https://itunes.apple.com/app/learn-unity/id634845779"><img src="http://itshardtofondlepenguins.com/wp-content/uploads/2013/04/IMG_0618.png" width="300"/></a>
+This is the GitHub page for the book Learn Unity 4 for iOS Game Development, the Unity projects for each chapter, and the accompanying Learn Unity bowling game app.
 
-This is the GitHub page for the book Learn Unity 4 for iOS Game Development, the Unity projects for each chapter, and the accompanying Learn Unity bowling game app. The sample code is also available on the [Unity Asset Store](https://www.assetstore.unity3d.com/en/#!/content/19295)
-
-The github projects have been updated to Unity 5 (with no code changes required since Unity 4.6). This book is getting dated, though. In particular, I recommend new users starting with Unity 5 use the new Unity GUI (uGUI) and C# instead of Javascript/Unityscript.
+The github projects have been updated to the latest versions of Unity. Javascript/Unityscript support will eventually be removed from Unity, so all that code will stop working at some point, but chapter 17 has been converted to C#.
 
 # The Book
 
@@ -31,6 +28,8 @@ The book introduces Unity starting with installation and activation, learning th
 Some retail descriptions list Unity's Mecanim animation system. The book does mention but does not use Mecanim. Instead, a chapter is devoted to a dancing skeleton example using Unity's Legacy animation system and a free skeleton package on the Asset Store. Also, some retail descriptions list Unity's support for gyroscope on iOS devices. The book does mention but does not use Unity's gyroscope API (Input.gyroscope). The book does describe how to access the touchscreen (Input.touches), accelerometer (Input.accelerometer), and webcam (WebCamTexture).
 
 Technical review was provided by Marc Shårer of [Gayasoft](http://gayasoft.ch).
+
+A [newer edition](https://www.apress.com/gp/book/9781484231739) of this book is available, updated by Allan Fowler.
 
 ## Support
 
@@ -281,25 +280,12 @@ Explore Further
 
 Set up iAd in iTunes Connect. Add a banner ad and intersitiai ad to the bowling game with scripts.
 
-In Unity 4.3, the iAd scripting interface has been revised and greatly simplified:
-
-http://www.fugutalk.com/?p=6387
-
 * page 443: In "The while loop calls yield", "yield" should be formatted as inline code
 * page 443: "the ad will immediately display by with a call to" should read "the ad will immediately display with a call to"
 * page 443: "which will show up as check boxes" should read "which will show up as checkboxes"
 * page 447: "the static variable of iPhone.generation" should read "the static variable iPhone.generation"
 
-Explore Further
-
-* [Scripting Reference](http://docs.unity3d.com/Documentation/ScriptReference/index.html)
- * [ADBannerView](http://docs.unity3d.com/Documentation/ScriptReference/ADBannerview.html)
- * [ADInterstitialView](http://docs.unity3d.com/Documentation/ScriptReference/ADInterstitialView.html)
- * [iPhone](http://docs.unity3d.com/Documentation/ScriptReference/iPhone.html)
- * [iPhone.generation](http://docs.unity3d.com/Documentation/ScriptReference/iPhone-generation.html)
-* [iOS Developer Library](http://developer.apple.com/library/ios)
- * [ADBannerView](http://developer.apple.com/library/ios/#documentation/UserExperience/Reference/ADBannerView_Ref/Reference/Reference.html)
- * [ADInterstitialAd](http://developer.apple.com/library/ios/#documentation/iAd/Reference/ADInterstitialAd_Ref/Introduction/Introduction.html)
+Apple has since discontinued iAd, so there is no longer a scripting interface. There are other ad services with Unity script interfaces, including Unity's own Unity Ads.
 
 ### Chapter 16 - Optimization
 
@@ -385,18 +371,5 @@ The GitHub projects, built up cumulatively through each chapter to create a bowl
 
 # The App
 
-The [HyperBowl](http://hyperbowl3d.com/)-style bowling game developed by following the book, complete with Asset Store assets and Unity Standard Assets, is [on the App Store](https://itunes.apple.com/app/learn-unity/id634845779). There is also an Android version [on Google Play](https://play.google.com/store/apps/details?id=com.technicat.HyperBowlComplete) and the [Amazon appstore](http://www.amazon.com/Technicat-LLC-Learn-Unity/dp/B00DHYHKJU)
+The [HyperBowl](http://hyperbowl3d.com/)-style bowling game developed by following the book, complete with Asset Store assets and Unity Standard Assets, is [on the App Store](https://itunes.apple.com/app/learn-unity/id634845779). There is also an Android version [on Google Play](https://play.google.com/store/apps/details?id=com.technicat.HyperBowlComplete).
 
-# 5-Star Reviews
-
-[Very useful](http://www.amazon.com/review/R2VZS6TY0Q71KT/ref=cm_cr_pr_perm?ie=UTF8&ASIN=1430248750)
-
-[Great book, very professional and extremely simple](http://www.amazon.com/review/RHBWP226WYYDX/ref=cm_cr_pr_perm?ie=UTF8&ASIN=1430248750)
-
-[Game programming student's perspective](http://www.amazon.com/review/R1ABNNE8AWOCHM/ref=cm_cr_pr_perm?ie=UTF8&ASIN=B00ACC6BJK)
-
-[Wonderful book](http://www.amazon.com/review/R3FZZROMLTM1B/ref=cm_cr_pr_perm?ie=UTF8&ASIN=B00ACC6BJK)
-
-[This book has great explanation](http://www.amazon.com/review/R2KARUHZDEA8XQ/ref=cm_cr_pr_perm?ie=UTF8&ASIN=B00EBWZHWY)
-
-[I read it cover to cover](http://www.amazon.ca/product-reviews/B00ACC6BJK/)
