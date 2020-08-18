@@ -371,5 +371,5 @@ The GitHub projects, built up cumulatively through each chapter to create a bowl
 
 # The App
 
-The [HyperBowl](http://hyperbowl3d.com/)-style bowling game developed by following the book, complete with Asset Store assets and Unity Standard Assets, is [on the App Store](https://itunes.apple.com/app/learn-unity/id634845779). There is also an Android version [on Google Play](https://play.google.com/store/apps/details?id=com.technicat.HyperBowlComplete).
+The [HyperBowl](https://technicat.itch.io/hyperbowl)-style bowling game developed by following the book, complete with Asset Store assets and Unity Standard Assets, is [on the App Store](https://itunes.apple.com/app/learn-unity/id634845779). There is also an Android version [on Google Play](https://play.google.com/store/apps/details?id=com.technicat.HyperBowlComplete).
 
