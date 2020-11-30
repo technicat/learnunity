@@ -6,6 +6,8 @@ http://github.com/technicat/LearnUnity
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 namespace Fugu {
 
@@ -15,7 +17,7 @@ namespace Fugu {
 		void Update () {
 			if (Time.deltaTime>0) {
 				float fps = Time.timeScale/Time.deltaTime;
-				GetComponent<GUIText>().text  = fps.ToString("f0")+"FPS";
+				GetComponent<Text>().text  = fps.ToString("f0")+"FPS";
 		}
 	}
 
