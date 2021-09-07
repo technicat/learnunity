@@ -371,5 +371,5 @@ The GitHub projects, built up cumulatively through each chapter to create a bowl
 
 # The App
 
-The app is currently unpublished on the App Store but available as desktop, web, and Android builds on [itch.io](https://technicat.itch.iolearnunity)
+The app is currently unpublished on the App Store but available as desktop, web, and Android builds on [itch.io](https://technicat.itch.io/learnunity)
 
