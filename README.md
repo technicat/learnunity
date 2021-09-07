@@ -1,4 +1,4 @@
-This is the GitHub page for the book Learn Unity 4 for iOS Game Development, the Unity projects for each chapter, and the accompanying Learn Unity bowling game app.
+This is the GitHub page for the book Learn Unity 4 for iOS Game Development (first edition), the Unity projects for each chapter, and the accompanying Learn Unity bowling game app.
 
 Javascript/Unityscript is no longer supported by Unity, but chapter 17 has been converted to C# and minimally updated to work with the latest version of Unity (2020.1.15).
 
@@ -371,5 +371,5 @@ The GitHub projects, built up cumulatively through each chapter to create a bowl
 
 # The App
 
-The [HyperBowl](https://technicat.itch.io/hyperbowl)-style bowling game developed by following the book, complete with Asset Store assets and Unity Standard Assets, is [on the App Store](https://itunes.apple.com/app/learn-unity/id634845779). There is also an Android version [on Google Play](https://play.google.com/store/apps/details?id=com.technicat.HyperBowlComplete).
+The [HyperBowl](https://technicat.itch.io/hyperbowl)-style bowling game developed by following the book, complete with Asset Store assets and Unity Standard Assets, is [on the App Store](https://itunes.apple.com/app/learn-unity/id634845779) (desktop, web, and Android builds)
 
