@@ -29,12 +29,6 @@ Some retail descriptions list Unity's Mecanim animation system. The book does me
 
 Technical review was provided by Marc Shårer of [Gayasoft](http://gayasoft.ch).
 
-A [newer edition](https://www.apress.com/gp/book/9781484231739) of this book is available, updated by Allan Fowler.
-
-## Support
-
-Questions can be posted on the [Unity forum](http://forum.unity3d.com/threads/173210-Learn-Unity-for-iOS-Game-Development), any of my Facebook pages ([Technicat](http://facebook.com/technicatllc), [Fugu Games](http://facebook.com/fugugames) or [HyperBowl](http://facebook.com/hyperbowl)) and on [twitter](http://twitter.com/fugugames).
-
 ## Contents, Clarifications, and Corrections
 
 Page numbers correspond to the print version. Links are provided to the online Unity documentation cited in the Explore Further sections.
