@@ -42,8 +42,8 @@ Page numbers correspond to the print version. Links are provided to the online U
 Explore Further
 
 * [Beginning 3D Game Development with Unity](http://3dadventurous.com)
-* [Unity 3.x Game Development Essentials] (http://www.packtpub.com/unity-3-x-game-development-essentials)
-* [Game Development for iOS with Unity3D] (http://www.crcpress.com/product/isbn/9781439892190)
+* [Unity 3.x Game Development Essentials](http://www.packtpub.com/unity-3-x-game-development-essentials)
+* [Game Development for iOS with Unity3D](http://www.crcpress.com/product/isbn/9781439892190)
 
 A full list of Unity books is available at [Games from Scratch](http://www.gamefromscratch.com/page/Unity-Book-Roundup.aspx)
 
