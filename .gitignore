@@ -8,6 +8,7 @@
 [Tt]emp/
 [Oo]bj/
 [Ll]ogs/
+[Uu]ser[Ss]ettings/
 
 # debug files
 *.csproj
