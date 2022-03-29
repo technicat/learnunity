@@ -358,7 +358,7 @@ No problems that I can see.
 
 # The Code
 
-The GitHub projects, built up cumulatively through each chapter to create a bowling game similar in style to [HyperBowl](http://hyperbowl3d.com/), do not include assets from the Unity Asset Store and Standard Assets that are used in the book, but you can use them a starting point or to save time in constructing the book examples (but taking shortcuts isn't really recommended). The projects require Unity 4.2 or later and are covered under the MIT open source license.
+The GitHub projects, built up cumulatively through each chapter to create a bowling game similar in style to [HyperBowl](http://hyperbowl.rocks/), do not include assets from the Unity Asset Store and Standard Assets that are used in the book, but you can use them a starting point or to save time in constructing the book examples (but taking shortcuts isn't really recommended). The projects require Unity 4.2 or later and are covered under the MIT open source license.
 
 # The App
 
