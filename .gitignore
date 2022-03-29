@@ -7,6 +7,7 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
+[Ll]ogs/
 
 # debug files
 *.csproj
