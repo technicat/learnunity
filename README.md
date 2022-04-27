@@ -1,6 +1,6 @@
 This is the GitHub page for the book Learn Unity 4 for iOS Game Development (first edition), the Unity projects for each chapter, and the accompanying Learn Unity bowling game app.
 
-Javascript/Unityscript is no longer supported by Unity, but chapter 17 has been converted to C# and minimally updated to work with the latest version of Unity (2021.2.17).
+Javascript/Unityscript is no longer supported by Unity, but chapter 17 has been converted to C# and minimally updated to work with the latest version of Unity (2022.3.1).
 
 # The Book
 
