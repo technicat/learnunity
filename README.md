@@ -4,7 +4,7 @@ Javascript/Unityscript is no longer supported by Unity, but chapter 17 has been 
 
 # The Book
 
-Learn Unity 4 for iOS Game Development is now available!
+Learn Unity 4 for iOS Game Development is available on:
 
 * [Amazon](http://www.amazon.com/Learn-Unity-iOS-Game-Development/dp/1430248750) (print and kindle book)
 * [Apress](http://www.apress.com/9781430248750) (print, pdf, epub and mobi) Alpha purchasers should download  the latest, final
@@ -18,8 +18,10 @@ https://itunes.apple.com/us/book/learn-unity-4-for-ios-game/id670921450?mt=11) (
 * [Powell's](http://www.powells.com/biblio/61-9781430248750-0)
 * [Safari Books](http://my.safaribooksonline.com/book/programming/game-programming/9781430248750) (online subscription)
 * [Springer Link](http://link.springer.com/book/10.1007/978-1-4302-4876-7)
-* 
-The book introduces Unity starting with installation and activation, learning the interface with the included Angry Bots demo, and then builds up successively more elaborate project examples from scratch and using free assets from the Unity Asset Store. A simple spinning cube and dancing skeleton scene is constructed, but most of the book is devoted to building a 3D bowling game with the control style of [HyperBowl](http://hyperbowl.rocks/). The game is first developed and tested in the Unity Editor, incorporating graphics, scripting (with JavaScript), physics, sound, user interface, complete rules for a bowling game, and mouse controls. The game is then adapted to run on iOS with touchscreen and (a little bit of) accelerometer input. Testing with the Unity Remote, iOS Simulator and real devices is explained, Game Center and iAd integration is covered, and then optimization techniques are described. The book concludes with a brief treatment of miscellaneous topics such as C# scripting, Unity Editor scripting, Android development, and tracking and promoting sales.
+
+A second edition was published by Apress for Unity 2017 but I was not involved in that update.
+
+This book introduces Unity starting with installation and activation, learning the interface with the included Angry Bots demo, and then builds up successively more elaborate project examples from scratch and using free assets from the Unity Asset Store. A simple spinning cube and dancing skeleton scene is constructed, but most of the book is devoted to building a 3D bowling game with the control style of [HyperBowl](http://hyperbowl.rocks/). The game is first developed and tested in the Unity Editor, incorporating graphics, scripting (with JavaScript), physics, sound, user interface, complete rules for a bowling game, and mouse controls. The game is then adapted to run on iOS with touchscreen and (a little bit of) accelerometer input. Testing with the Unity Remote, iOS Simulator and real devices is explained, Game Center and iAd integration is covered, and then optimization techniques are described. The book concludes with a brief treatment of miscellaneous topics such as C# scripting, Unity Editor scripting, Android development, and tracking and promoting sales.
 
 Some retail descriptions list Unity's Mecanim animation system. The book does mention but does not use Mecanim. Instead, a chapter is devoted to a dancing skeleton example using Unity's Legacy animation system and a free skeleton package on the Asset Store. Also, some retail descriptions list Unity's support for gyroscope on iOS devices. The book does mention but does not use Unity's gyroscope API (Input.gyroscope). The book does describe how to access the touchscreen (Input.touches), accelerometer (Input.accelerometer), and webcam (WebCamTexture).
 
