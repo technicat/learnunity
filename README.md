@@ -328,11 +328,6 @@ Miscellaneous topics: C# and Editor scripts, plugins, customizing script executi
 * page 513: There should be a paragraph break after "Twitter, by the way, is another great way to interact with other Unity developers, on a more personal level."
 * page 513: Of course, the UNITY_IPHONE preprocessor definition is not active when the build target is Android. Use UNITY_ANDROID instead (or in addition). Unlike iOS, Android apps conventionally have a Quit button and Android devices have a Back button that is recognized by Unity as the Escape key. The GitHub project for this chapter includes those Android-specific changes in the pause menu. Backing up the assertion that the code in this book works on Android, the Learn Unity app is available on Google Play and the Amazon Appstore, and for the Nook and the Nabi tablets.
 
-Tracking Apps
-
-* [Appviz](http://appviz.com/)
-* [AppAnnie](http://appannie.com/)
-* [AppFigures](http://appfigures.com/)
 
 ### Back Cover
 
