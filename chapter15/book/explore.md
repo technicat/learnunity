@@ -1,4 +1,4 @@
-# Chapter 15
+# iAd: Banner Ads and Interstitial Ads
 
 ## Explore Further
 

@@ -1,6 +1,4 @@
-# Preface
-
-## How I Met Unity
+# How I Met Unity
 
 Technically, I first started programming on a TRS-80 in my junior high school library, but really I just typed in the same BASIC code listing from a magazine every day until the librarian mentioned I could save the program on a cassette. I'm embarrassed to recall my first reaction when I heard the library had a computer: “What's it good for?”
 
