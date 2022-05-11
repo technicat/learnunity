@@ -1,3 +1,6 @@
+# don't commit itch.io script
+publish.sh
+
 # git ignore for unity repo
 
 # those hidden OSX files
