@@ -1,4 +1,4 @@
-This is the GitHub page for the book Learn Unity 4 for iOS Game Development (first edition -- I have shared authorship in the second but was not involved in the update), the Unity projects for each chapter, and the accompanying Learn Unity bowling game app.
+This is the GitHub page for the book Learn Unity 4 for iOS Game Development (I have shared authorship in the Unity 2017 update but was not involved in the update), the Unity projects for each chapter, and the accompanying Learn Unity bowling game app.
 
 The Apress contract allows author publication of some excerpts, so I've included the preface and the Explore Further sections at the end of each chapter (slighty updated with link fixes and removal of some obsolete info, like referral to my social media feeds).
 
