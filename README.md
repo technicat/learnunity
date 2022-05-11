@@ -4,11 +4,11 @@ Javascript/Unityscript is no longer supported by Unity, but chapter 17 has been 
 
 # The Book
 
-Learn Unity 4 for iOS Game Development is now available!
+Learn Unity 4 for iOS Game Development is available on:
 
 * [Amazon](http://www.amazon.com/Learn-Unity-iOS-Game-Development/dp/1430248750) (print and kindle book)
 * [Apress](http://www.apress.com/9781430248750) (print, pdf, epub and mobi) Alpha purchasers should download  the latest, final
-* [Barnes and Noble](http://www.barnesandnoble.com/w/learn-unity-4-for-ios-game-development-philip-chu/1113931582?ean=9781430248750) (print and nook book and in stores)
+* [Barnes and Noble](https://www.barnesandnoble.com/w/learn-unity-4-for-ios-game-development-philip-chu/1113931582?ean=9781430248767) (nook book)
 * [Goodreads](http://www.goodreads.com/book/show/17063557-learn-unity-4-for-ios-game-development) (links to online bookstores)
 * [Google Books](http://books.google.com/books?id=TsC_MgEACAAJ) (links to online bookstores)
 * [iBookstore](
@@ -18,9 +18,10 @@ https://itunes.apple.com/us/book/learn-unity-4-for-ios-game/id670921450?mt=11) (
 * [Powell's](http://www.powells.com/biblio/61-9781430248750-0)
 * [Safari Books](http://my.safaribooksonline.com/book/programming/game-programming/9781430248750) (online subscription)
 * [Springer Link](http://link.springer.com/book/10.1007/978-1-4302-4876-7)
-* [WH Smith](http://www.whsmith.co.uk/products/learn-unity-4-for-ios-game-development/product/9781430248750)
 
-The book introduces Unity starting with installation and activation, learning the interface with the included Angry Bots demo, and then builds up successively more elaborate project examples from scratch and using free assets from the Unity Asset Store. A simple spinning cube and dancing skeleton scene is constructed, but most of the book is devoted to building a 3D bowling game with the control style of [HyperBowl](http://hyperbowl.rocks/). The game is first developed and tested in the Unity Editor, incorporating graphics, scripting (with JavaScript), physics, sound, user interface, complete rules for a bowling game, and mouse controls. The game is then adapted to run on iOS with touchscreen and (a little bit of) accelerometer input. Testing with the Unity Remote, iOS Simulator and real devices is explained, Game Center and iAd integration is covered, and then optimization techniques are described. The book concludes with a brief treatment of miscellaneous topics such as C# scripting, Unity Editor scripting, Android development, and tracking and promoting sales.
+A second edition was published by Apress for Unity 2017 but I was not involved in that update.
+
+This book introduces Unity starting with installation and activation, learning the interface with the included Angry Bots demo, and then builds up successively more elaborate project examples from scratch and using free assets from the Unity Asset Store. A simple spinning cube and dancing skeleton scene is constructed, but most of the book is devoted to building a 3D bowling game with the control style of [HyperBowl](http://hyperbowl.rocks/). The game is first developed and tested in the Unity Editor, incorporating graphics, scripting (with JavaScript), physics, sound, user interface, complete rules for a bowling game, and mouse controls. The game is then adapted to run on iOS with touchscreen and (a little bit of) accelerometer input. Testing with the Unity Remote, iOS Simulator and real devices is explained, Game Center and iAd integration is covered, and then optimization techniques are described. The book concludes with a brief treatment of miscellaneous topics such as C# scripting, Unity Editor scripting, Android development, and tracking and promoting sales.
 
 Some retail descriptions list Unity's Mecanim animation system. The book does mention but does not use Mecanim. Instead, a chapter is devoted to a dancing skeleton example using Unity's Legacy animation system and a free skeleton package on the Asset Store. Also, some retail descriptions list Unity's support for gyroscope on iOS devices. The book does mention but does not use Unity's gyroscope API (Input.gyroscope). The book does describe how to access the touchscreen (Input.touches), accelerometer (Input.accelerometer), and webcam (WebCamTexture).
 
@@ -327,11 +328,6 @@ Miscellaneous topics: C# and Editor scripts, plugins, customizing script executi
 * page 513: There should be a paragraph break after "Twitter, by the way, is another great way to interact with other Unity developers, on a more personal level."
 * page 513: Of course, the UNITY_IPHONE preprocessor definition is not active when the build target is Android. Use UNITY_ANDROID instead (or in addition). Unlike iOS, Android apps conventionally have a Quit button and Android devices have a Back button that is recognized by Unity as the Escape key. The GitHub project for this chapter includes those Android-specific changes in the pause menu. Backing up the assertion that the code in this book works on Android, the Learn Unity app is available on Google Play and the Amazon Appstore, and for the Nook and the Nabi tablets.
 
-Tracking Apps
-
-* [Appviz](http://appviz.com/)
-* [AppAnnie](http://appannie.com/)
-* [AppFigures](http://appfigures.com/)
 
 ### Back Cover
 
