@@ -36,13 +36,13 @@ The Unity Input class gives us access to basic touch information, but it doesn�
 
 For example, in HyperBowl I wanted the pause menu to come up when the player pinches the screen (two fingers on the screen coming together). With the Finger Gestures package, it just involves adding a callback for the gesture in the pause menu script:
 
-function OnGesturePinchEnd(pos1:Vector2,pos2:Vector2) {
+`function OnGesturePinchEnd(pos1:Vector2,pos2:Vector2) {
 	PauseGame();
-}
+}`
 
 and then a line in the Start or Awake function that adds the callback to the FingerGestures callback list for that gesture:
 
-FingerGestures.OnPinchEnd += OnGesturePinchEnd;
+`FingerGestures.OnPinchEnd += OnGesturePinchEnd;`
 
 Unity doesn’t provide script access to everything available in iOS, and that’s where plugins come in. The Unity plugin system allows you to add new script functions that access “native” code. So, generally speaking, if you can code something in C, C++, or Objective-C, you can make a Unity plugin for it. For example, in the Unity Asset Store, you’ll find there are plug-ins built around mobile ad SDKs and plugins for accessing iOS features.
 
@@ -52,7 +52,7 @@ That’s why I like to use the plug-ins provided by Prime31 Studios at http://pr
 
 For example, the Prime31 Etcetera plugin, available on the Asset Store, has a bunch of assorted features, including access to the iOS Photos gallery and the device camera, with one function call, like this:
 
-	EtceteraBinding.promptForPhoto(1.0);
+`EtceteraBinding.promptForPhoto(1.0);`
 
 The screenshot in Figure 13-8 shows the resulting prompt in my Fugu Maze app (where I use the photo chooser to allow players to customize the maze wall texture). If you want to try it out, download Fugu Maze Free from the App Store or one of the free HyperBowl lanes (I use the photo chooser to customize the bowling ball texture).
 
@@ -61,7 +61,8 @@ Figure 13-8. The Prime31 Etcetera plug-in photo chooser on an iPad
 Another Prime31 plugin that makes available additional device input is the iCade plugin (only available on the Prime31 web site). The iCade is a retro-style arcade cabinet that provides joystick input to iOS devices through a Bluetooth connection. The iCade essentially pretends it’s a Bluetooth keyboard, so any code using the iCade plugin is similar to the code for keyboard controls. If we added code for iCade controls to the CalcForce function of our bowling ball code, it would look something like the snippet in Listing 13-10 (this sample is actually taken from HyperBowl).
 
 Listing 13-10. iCade Additions to CalcForce Using the Prime31 iCade Plug-In
-	var yinput:float = 0;
+
+`	var yinput:float = 0;
 	if (iCadeBinding.state.JoystickUp) yinput = 1;
 	if (iCadeBinding.state.JoystickDown) yinput = -1;
 	var xinput:float = 0;
@@ -70,5 +71,6 @@ Listing 13-10. iCade Additions to CalcForce Using the Prime31 iCade Plug-In
 	var deltatime:float = Time.deltaTime;
 	forcey += iCadePowery*yinput/deltatime;
 	forcex += iCadePowerx*xinput/deltatime;
+`
 
 Just as if we’re checking if four different keys were pressed, we’re checking if the joystick is moved in any of four directions. The joysticks aren’t any more sensitive than that.
