@@ -62,7 +62,7 @@ Another Prime31 plugin that makes available additional device input is the iCade
 
 Listing 13-10. iCade Additions to CalcForce Using the Prime31 iCade Plug-In
 
-`	var yinput:float = 0;
+	var yinput:float = 0;
 	if (iCadeBinding.state.JoystickUp) yinput = 1;
 	if (iCadeBinding.state.JoystickDown) yinput = -1;
 	var xinput:float = 0;
@@ -71,6 +71,6 @@ Listing 13-10. iCade Additions to CalcForce Using the Prime31 iCade Plug-In
 	var deltatime:float = Time.deltaTime;
 	forcey += iCadePowery*yinput/deltatime;
 	forcex += iCadePowerx*xinput/deltatime;
-`
+
 
 Just as if we’re checking if four different keys were pressed, we’re checking if the joystick is moved in any of four directions. The joysticks aren’t any more sensitive than that.
