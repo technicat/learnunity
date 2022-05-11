@@ -1,6 +1,6 @@
-= Preface
+# Preface
 
-== How I Met Unity
+## How I Met Unity
 
 Technically, I first started programming on a TRS-80 in my junior high school library, but really I just typed in the same BASIC code listing from a magazine every day until the librarian mentioned I could save the program on a cassette. I'm embarrassed to recall my first reaction when I heard the library had a computer: “What's it good for?”
 
@@ -15,17 +15,17 @@ It took me six months to get the first version of the HyperBowl remake running a
 
 This has all taken place with a dev team of one (not counting all the work put into the original licensed assets), and I didn’t have to learn a single line of Objective-C or create my own art! In a sense, I feel like I've returned to my programming roots, working on my own projects for fun, and as a bonus, profit! Hopefully, I can distill my experience with Unity over the last six years (both mistakes and successes) into this book.
 
-== About this Book
+## About this Book
 
 With any game development book there’s the problem of trying to be all things to all people - there are plenty of areas in game development, Unity, and iOS that could easily take up whole books in themselves. This book is an introduction to developing games for iOS with Unity, so our goal is to get everyone acquainted with Unity and moving into Unity iOS development smoothly, following the same progression I've made over the years (but in less time!)
 
 On the way, we'll go through step-by-step project examples to learn the Unity Editor and how to incorporate graphics, audio, physics and scripting to make games, and then we'll move on to developing specifically for iOS. We'll take advantage of free art and audio from the Unity Asset Store, so we won't be creating 3D models or sound samples from scratch and can stay within the comfy confines of Unity (except when we have to dabble in Xcode when making iOS builds). We will, however, do plenty of scripting with Unity's version of Javascript. Our focus will be on using the built-in Unity script functions, but we'll point you to Unity plugins and packages that provide further capability.
 
-== Explore Further
+## Explore Further
 
 No one knows everything. That's why a key to successful development is knowing how to find the tools, assets, information and help you need. So instead of just listing a recap of topics at the end of each chapter (I never bother reading those), we'll suggest followup reading and resources for you to explore further.
 This is a good place to recommend some other worthwhile Unity books. Even on the same topic, it's useful to read different books for their different takes on the subject. For example, Will Goldstone wrote one of the first Unity books, Unity Game Development Essentials, Sue Blackman's Beginning Unity 3D Development is a hefty tome that presents an adventure game, and Jeff Murray covers Unity iOS in Game Development for iOS with Unity 3D, using a kart racing game as an example.
 Since I waxed nostalgic on Apple computers, I should follow up with a list of good Apple historical reading. Revolution in the Valley is a fun collection of Mac development anecdotes collected by Andy Hertzfeld. iWoz is an interesting peek at early Apple history and at the Woz himself.
 While this book does use make heavy use of example game projects, we won't have much discussion on game design. But there's certainly a lot of interesting reading on the subject. My favorite game design book is Richard Rouse's Game Design: Theory and Practice, mostly a collection of interviews with famous game designers. And there's a bounty of game design articles and blogs on the web site Gamasutra (http://gamasutra.com/).
-== Acknowledgments
+## Acknowledgments
 Before we get started, I'd like to give a special mention to the people who helped me get started back in my Apple II days. My parents, who bought the Apple II that I ended up programming (and also a printer after they saw me typing out code listings on a typewriter - that junior high typing class really paid off!). My fellow Apple II programmers, Dave Lyons (now actually at Apple) and Cam Clarke (who made it to Silicon Valley but left us all too early), and Mr. Leaman, the computer programming teacher who let us hide out in the computer lab during pep rallies. That was time well spent.
