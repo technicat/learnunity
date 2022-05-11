@@ -6,7 +6,7 @@ Finally, the scoreboard display makes our bowling game a fully functional bowlin
 
 The addition of the game GUI not only completes the bowling game (in a commercial game project, this might be considered a “first playable” milestone) but it also marks the end of our introduction to Unity’s basic features typically used in a 3D game.
 
-Tip:Although I left the GUI development to the end of this phase, which is unfortunately common in game development, it’s best to include GUI design early in the project. Even just sketching out the menus will help clarify the anticipated game modes and options.
+Tip: Although I left the GUI development to the end of this phase, which is unfortunately common in game development, it’s best to include GUI design early in the project. Even just sketching out the menus will help clarify the anticipated game modes and options.
 
 For the most part, although you’ve been modifying and testing the game solely in the Editor, these are cross-platform features. Right now, you could build this game as a web player or a Mac or Windows executable, and the game would run the same on all platforms, performance differences aside. But the ultimate goal of this book is to get you into iOS development, so, starting with the next chapter, the remainder of this book will be all about Unity iOS.
 

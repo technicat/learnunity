@@ -44,4 +44,4 @@ The Transitions Manager from DFT Games, available free on the Unity Asset Store,
 
 Josh Clark's Tapworthy: Designing Great Apps is the book that convinced me to eschew automatic icon gloss and always select Prerendered Icon in the Unity Player Settings. It's also a good treatment of app design in general.
 
-There are plenty of textbooks on linear algebra (and even a hefty “matrix” article on http://wikipedia.org/), but any computer graphics book will have a primer on the matrix math. For example, Real-time Rendering (http://realtimerendering.com/) has an appendix on “Some Linear Algebra.”
+There are plenty of textbooks on linear algebra (and even a hefty “matrix” article on http://wikipedia.org/), but any computer graphics book will have a primer on the matrix math. For example, [Real-time Rendering](http://realtimerendering.com/) has an appendix on “Some Linear Algebra.”
