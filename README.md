@@ -4,7 +4,7 @@ The Apress contract allows author publication of some excerpts, so I've included
 
 Javascript/Unityscript is no longer supported by Unity, but chapter 17 has been converted to C# and minimally updated to work with the latest version of Unity (2022.3.1).
 
-There is an updated version of the book for Unity 2017. I am listed as a co-author, and I believe it's primarily the same material with some examples updated and some sections removed, but I was not involved in that edition.
+There is an updated version of the book for Unity 2017. I am listed as a co-author, and I believe it's primarily the same material (still Javascript/Unityscript) with some examples updated and some sections removed, but I was not involved in that edition.
 
 # The Book
 
