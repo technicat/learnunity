@@ -94,11 +94,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.analytics": {
-      "version": "1.0.5",
+      "version": "4.0.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.services.core": "1.0.1"
+        "com.unity.ugui": "1.0.0",
+        "com.unity.services.core": "1.4.0"
       },
       "url": "https://packages.unity.com"
     },
