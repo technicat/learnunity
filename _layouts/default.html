@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <meta name="viewport" content="width=device-width">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      {% if site.logo %}
+      <a href="http://pc.cafe/"><img src="{{site.logo | relative_url}}"
+          alt="PC Cafe" /></a><br />
+      {% endif %}
+      <a href="https://apps.apple.com/us/developer/technicat-llc/id295241742"><img alt="App Store"
+          src="/images/ionicons/svg/logo-apple-appstore.svg" height="40"></a>
+      <a href="https://store.steampowered.com/app/847530/HyperBowl/"><img alt="Steam"
+          src="/images/ionicons/svg/logo-steam.svg" height="40"></a>
+       <a href="http://fugugames.com/"><img alt="Fugu Games" src="/images/ionicons/svg/game-controller-sharp.svg"
+          height="40"></a>
+       <a href="https://gamedevslikeyou.libsyn.com/phil-chu"><img alt="HomeTeam GameDev podcast" src="/images/ionicons/svg/radio-sharp.svg" height="40"></a>
+      <a href="https://vimeo.com/technicat"><img alt="Vimeo" src="/images/ionicons/svg/logo-vimeo.svg"
+          height="40"></a>
+      <a href="https://github.com/technicat"><img alt="Github" src="/images/ionicons/svg/logo-octocat.svg"
+          height="40"></a>
+      <!-- a href="http://hyperbowl.fun/"><img alt="HyperBowl" src="/images/ionicons/svg/bowling-ball-sharp.svg"
+          height="40"></a -->
+      <!-- a href="http://pc.cafe/"><img alt="PC Cafe feed" src="/images/ionicons/svg/cafe-sharp.svg" height="40"></a -->
+      <p/>
+      <p/>
+       <!--a href="https://apps.apple.com/us/app/cinefex/id512379220"><img alt="Cinefex" src="/images/cinefex/screenshots/cinefex172.jpeg" width="250"></a -->
+    </header>
+
+    <section>
+
+      {{ content }}
+
+    </section>
+    <footer>
+      {% if site.github.is_project_page %}
+      <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+      {% endif %}
+      <p><small>
+          Copyright &copy; 2017-2022 <a href="http://technicat.com/">Technicat LLC</a><br />
+        <a href="https://vimeo.com/showcase/9417158">Las Vegas, Nevada</a><br />
+        Owned and operated by <a href="http://philipchu.com/">Phil Chu</a><br />
+          Technicat logo by <a href="http://espressyourself.coffee">Dakota Snow</a><br />
+          Icons from <a href="http://ionicons.com/">Ionicons</a><br />
+          Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a><br />
+        </small></p>
+    </footer>
+  </div>
+  <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+
+</body>
+
+</html>
