@@ -16,23 +16,17 @@
   <div class="wrapper">
     <header>
       {% if site.logo %}
-      <a href="http://technicat.com/"><img src="{{site.logo | relative_url}}"
-          alt="PC Cafe" /></a><br />
+      <a href="http://technicat.com/"><img src="{{site.logo | relative_url}}" alt="Technicat" /></a><br />
       {% endif %}
-      <a href="https://apps.apple.com/us/developer/technicat-llc/id295241742"><img alt="App Store"
-          src="/images/ionicons/svg/logo-apple-appstore.svg" height="40"></a>
-      <a href="https://store.steampowered.com/app/847530/HyperBowl/"><img alt="Steam"
-          src="/images/ionicons/svg/logo-steam.svg" height="40"></a>
-       <a href="http://fugugames.com/"><img alt="Fugu Games" src="/images/ionicons/svg/game-controller-sharp.svg"
+      <a href="{{ site.github.repository_url }}"><img alt="Github" src="/images/ionicons/svg/logo-octocat.svg"
           height="40"></a>
-       <a href="https://gamedevslikeyou.libsyn.com/phil-chu"><img alt="HomeTeam GameDev podcast" src="/images/ionicons/svg/radio-sharp.svg" height="40"></a>
-      <a href="https://vimeo.com/technicat"><img alt="Vimeo" src="/images/ionicons/svg/logo-vimeo.svg"
+      {% if site.show_downloads %}
+      <a href="{{ site.github.releases_url }}"><img alt="Github" src="/images/ionicons/svg/download-outline.svg"
           height="40"></a>
-      <a href="https://github.com/technicat"><img alt="Github" src="/images/ionicons/svg/logo-octocat.svg"
-          height="40"></a>
-          <p/>
-          <p/>
-          <a href="https://www.amazon.com/Learn-Unity-Development-Technology-Action/dp/1430248750"><img alt="Learn Unity" src="/images/learnunity/cover.jpg" height="175"></a>
+      <p />
+      <p />
+      <a href="https://www.amazon.com/Learn-Unity-Development-Technology-Action/dp/1430248750"><img alt="Learn Unity"
+          src="/images/learnunity/cover.jpg" height="175"></a>
     </header>
 
     <section>
@@ -43,8 +37,8 @@
     <footer>
       <p><small>
           Copyright &copy; 2017-2022 <a href="http://technicat.com/">Technicat LLC</a><br />
-        <a href="https://vimeo.com/showcase/9417158">Las Vegas, Nevada</a><br />
-        Owned and operated by <a href="http://philipchu.com/">Phil Chu</a><br />
+          <a href="https://vimeo.com/showcase/9417158">Las Vegas, Nevada</a><br />
+          Owned and operated by <a href="http://philipchu.com/">Phil Chu</a><br />
           Technicat logo by <a href="http://espressyourself.coffee">Dakota Snow</a><br />
           Icons from <a href="http://ionicons.com/">Ionicons</a><br />
           Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a><br />
