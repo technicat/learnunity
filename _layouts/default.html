@@ -20,12 +20,35 @@
       {% if site.logo %}
       <a href="http://technicat.com/"><img src="{{site.logo | relative_url}}" alt="Technicat" /></a><br />
       {% endif %}
-      <a href="https://www.amazon.com/Learn-Unity-Development-Technology-Action/dp/1430248750"><img alt="Amazon"
-          src="/images/ionicons/svg/logo-amazon.svg" height="40"></a>
-      <a href="{{ site.github.repository_url }}"><img alt="Github" src="/images/ionicons/svg/logo-octocat.svg"
+
+      {% if site.appstore %}
+      <a href="{{site.appstore}}"><img alt="App Store" src="/images/ionicons/svg/logo-apple-appstore.svg"
           height="40"></a>
+      {% endif %}
+      {% if site.amazon %}
+      <a href="{{site.amazon}}"><img alt="Amazon" src="/images/ionicons/svg/logo-amazon.svg" height="40"></a>
+      {% endif %}
+      {% if site.steam %}
+      <a href="{{site.steam}}"><img alt="Steam" src="/images/ionicons/svg/logo-steam.svg" height="40"></a>
+      {% endif %}
+      {% if site.games %}
+      <a href="{{site.games}}"><img alt="games" src="/images/ionicons/svg/game-controller-sharp.svg" height="40"></a>
+      {% endif %}
+      {% if site.podcast %}
+      <a href="{{site.podcast}}"><img alt="podcast" src="/images/ionicons/svg/radio-sharp.svg" height="40"></a>
+      {% endif %}
+      {% if site.vimeo %}
+      <a href="{{site.vimeo}}"><img alt="Vimeo" src="/images/ionicons/svg/logo-vimeo.svg" height="40"></a>
+      {% endif %}
+      {% if site.is_project_page %}
+      <a href="{{site.github.repository_url}}"><img alt="Github project" src="/images/ionicons/svg/logo-octocat.svg"
+          height="40"></a>
+      {% else %}
+      <a href="{{site.github.owner_url}}"><img alt="Github profile" src="/images/ionicons/svg/logo-octocat.svg"
+          height="40"></a>
+      {% endif %}
       {% if site.show_downloads %}
-      <a href="{{ site.github.releases_url }}"><img alt="Github" src="/images/ionicons/svg/download-outline.svg"
+      <a href="{{site.github.releases_url}}"><img alt="Github releases" src="/images/ionicons/svg/download-outline.svg"
           height="40"></a>
       {% endif %}
       <p />
@@ -44,7 +67,8 @@
           Owned and operated by <a href="http://philipchu.com/">Phil Chu</a><br />
           Technicat logo by <a href="http://espressyourself.coffee">Dakota Snow</a><br />
           Icons from <a href="http://ionicons.com/">Ionicons</a><br />
-          Hosted on GitHub Pages &mdash; Adapted from the <a href="https://github.com/pages-themes/minimal">Minimal</a>
+          Hosted on <a href="https://pages.github.com/">GitHub Pages</a> &mdash; Adapted from the <a
+            href="https://github.com/pages-themes/minimal">Minimal</a>
           theme by <a href="https://github.com/orderedlist">orderedlist</a><br />
         </small></p>
     </footer>
