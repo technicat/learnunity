@@ -2,7 +2,7 @@ This is the GitHub repo for the book Learn Unity 4 for iOS Game Development. It 
 
 The Apress contract allows author publication of some excerpts, so I've included the preface and the Explore Further sections at the end of each chapter (slighty updated with link fixes and removal of some obsolete info, like referral to my social media feeds).
 
-Javascript/Unityscript is no longer supported by Unity, but chapter 17 has been converted to C# and minimally updated to work with the latest version of Unity (2022.3.1).
+Javascript/Unityscript is no longer supported by Unity, but chapter 17 has been converted to C# and minimally updated to work with the latest version of Unity (2022.1.14).
 
 There is an updated version of the book for Unity 2017. I am listed as a co-author, and I believe it's primarily the same material (still Javascript/Unityscript) with some examples updated and some sections removed, but I was not involved in that edition.
 
