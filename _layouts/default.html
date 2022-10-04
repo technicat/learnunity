@@ -63,13 +63,17 @@
     <footer>
       <p><small>
           Copyright &copy; 2017-2022 <a href="http://technicat.com/">Technicat LLC</a><br />
-          Owned and operated by <a href="http://philipchu.com/">Phil Chu</a><br />
-          Technicat logo by <a href="http://espressyourself.coffee">Dakota Snow</a><br />
-          Icons from <a href="http://ionicons.com/">Ionicons</a><br />
-          Hosted on <a href="https://pages.github.com/">GitHub Pages</a> &mdash; Adapted from the <a
-            href="https://github.com/pages-themes/minimal">Minimal</a>
-          theme by <a href="https://github.com/orderedlist">orderedlist</a><br />
+          Logo by <a href="http://espressyourself.coffee">Dakota Snow</a>,
+            icons from <a href="http://ionicons.com/">Ionicons</a><br />
+            On <a href="https://pages.github.com/">GitHub Pages</a> with a modified <a
+              href="https://github.com/pages-themes/minimal">Minimal</a>
+            theme
         </small></p>
+      {% if site.privacy %}
+      <p><small>
+          {{site.privacy}}
+        </small></p>
+      {% endif %}
     </footer>
   </div>
   <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
