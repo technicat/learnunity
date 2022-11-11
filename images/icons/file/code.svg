@@ -1,0 +1,10 @@
+<svg version="1.1" width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- background -->
+    <rect width="100%" height="100%" fill="white" />
+    <g transform="translate(500 500)">
+        <text x="0" y="100" stroke="black" stroke-width="10" fill="black" font-size="500"
+            text-anchor="middle">{...}</text>
+    </g>
+
+</svg>
