@@ -1,6 +1,6 @@
 This is the GitHub repo for the book Learn Unity 4 for iOS Game Development. It includes the Unity projects for each chapter, culminating in the Learn Unity bowling game [app](http://technicat.itch.io/learnunity).
 
-The republishing rights revert to me after the book goes "out of print" but I don't know if that ever happense these days with on-demand printing. The Apress contract does allow author publication of some excerpts, so I've included the preface and the Explore Further sections at the end of each chapter (slighty updated with link fixes and removal of some obsolete info, like referral to my social media feeds). They are also collected at [learnunity.technicat.com](http://learnunity.technicat.com).
+The republishing rights revert to me after the book goes "out of print" but I don't know if that ever happens these days with on-demand printing. The Apress contract does allow author publication of some excerpts, so I've included the preface and the Explore Further sections at the end of each chapter (slighty updated with link fixes and removal of some obsolete info, like referral to my social media feeds). They are also collected at [learnunity.technicat.com](http://learnunity.technicat.com).
 
 Javascript/Unityscript is no longer supported by Unity, but the chapter 17 project here has been converted to C# and minimally updated to work with recent versions of Unity (I perform an upgrade time to time). Some Unity APIs are no longer available, e.g. the user interface.
 
